@@ -1,7 +1,7 @@
 /* TO DO LIST
 JS:
-- Results screen isn't working.
-- Results screen needs media query work.
+- Transition into Results can be smoother.
+- Video fadeIn no working.
 */
 
 'use strict';
@@ -19,15 +19,62 @@ function updateScore () {
     console.log('`updateScore` ran');
 };
 
-//Users greeted by a welcome page
+//Shuffle the quiz questions so they are different each time
+function shuffle(array, x) {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    };
+    return array;
+};
+
+function audioWarning() {
+    $('.warningButton').on('click', function () {
+        $('.quizStart').fadeOut(1000, function () {
+            runQuiz();
+        });
+        $('.music').html(`
+        <audio id="audio" autoplay loop>
+            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0J4xJJEqRZO.mp3" type="audio/mp3">
+        </audio>`);
+    });
+    console.log('`audioWarning` ran');
+};
+
+//Begin the quiz
+//Shuffle quiz questions and answers so the user cannot cheat ;)
+function runQuiz() {
+    $('.quizStart').html(`
+    <p class="important">Think you can survive the Fog?</p>
+        <button type="button" class="startButton">Enter the Fog</button>`);
+    $('.quizStart').fadeIn(1000);
+    shuffle(STORE);
+    for (let i = 0; i < 10; i++) {
+        shuffle(STORE[i]['answers']);
+    };
+    $('.score-tally').css({
+        display: 'none'
+    });
+    $('.questionAnswerForm').css({
+        display: 'none'
+    });
+    beginQuiz();
+    console.log('`runQuiz` ran');
+};
+
 //Button prompt to begin the quiz
-//When the quiz begins, welcome page imagery should disappear,
-//logo should shrink, and everything else should fade out
+//When the quiz begins, logo shrinks and everything fades out into quiz
 function beginQuiz() {
     $('.imagery').fadeOut(1000);
     $('.video').fadeOut(1000);
     $('.startButton').on('click', function () {
-        submitAnswer();
         $('.score-tally').html(`
         <ul>
             <li>Question: <span id="questionNumber">0</span>/10</li>
@@ -44,6 +91,7 @@ function beginQuiz() {
         $('.begin-prompt').fadeOut(1000, function () {
             $('.score-tally').fadeIn(1000);
             presentQuestion();
+            submitAnswer();
         });
         $('.dbd-logo').animate({
             maxWidth: '50%',
@@ -84,12 +132,8 @@ function presentQuestion() {
                             </label>
                             <button type="submit" class="submitButton">Submit</button>
                         </fieldset>
-            </div>`);
-    } else {
-        results();
-        restartQuiz();
-        $('.questionNumber').text(10)
-      };
+            </div>`);      
+    };
     console.log('`presentQuestion` ran');
 };
 
@@ -104,54 +148,15 @@ function submitAnswer() {
         let questionNumber = Number(document.getElementById('questionNumber').innerHTML) - 1;
         let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
         if (answer === correctAnswer) {
-            selected.parent().addClass('correct');
             answerCorrect();
         } else if (!answerChosen) {
             noAnswer();
         } else {
-            selected.parent().addClass('wrong');
             answerIncorrect();
         };
         presentImagery();
     });
     console.log('`submitAnswer` ran');
-};
-
-//Alert the user to select an answer next time
-function noAnswer() {
-    $('.audioAnswer').html(`
-        <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0z2IiP8Pqvs.mp3" type="audio/mp3">
-        </audio>`);
-    let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
-    let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;
-    if (questionNumber === 10) {
-        $('.answerResponse').html(`
-            <p class="important">In the Fog, if you don't act, you die.</p>
-            <p class="important">Try choosing an answer next round.</p>
-            <p class="basicText">The correct answer was: ${correctAnswer}</p>
-            <button type="submit" class="seeResults">See Your Results</button>`);
-        $('.questionAnswerForm').fadeOut(1000, function () {
-            $('.answerResponse').fadeIn(1000);
-        });
-        $('.seeResults').on('click', function () {
-            $('.imagery').fadeOut(1000);
-            $('.video').fadeOut(1000);
-            $('.questionAnswerForm').fadeOut(1000);
-            $('.score-tally').fadeOut(1000);
-            results();
-        });
-    } else {
-        $('.answerResponse').html(`
-            <p class="important">In the Fog, if you don't act, you die.</p>
-            <p class="important">Try choosing an answer next round.</p>
-            <p class="basicText">The correct answer was: ${correctAnswer}</p>
-            <button type="submit" class="nextQuestionButton">Next Question</button>`);
-        $('.questionAnswerForm').fadeOut(1000, function () {
-            $('.answerResponse').fadeIn(1000);
-        });
-    };  
-    console.log('`answerCorrect` ran');
 };
 
 //Congratulate the user
@@ -170,11 +175,13 @@ function answerCorrect() {
             $('.answerResponse').fadeIn(1000);
         });
         $('.seeResults').on('click', function () {
-            $('.imagery').fadeOut(1000);
+            $('.imagery').fadeOut(1000, function () {
+                $('.imagery').html(``);
+                results();
+            });
             $('.video').fadeOut(1000);
             $('.questionAnswerForm').fadeOut(1000);
             $('.score-tally').fadeOut(1000);
-            results();
         });
     } else {
         $('.answerResponse').html(`
@@ -207,13 +214,13 @@ function answerIncorrect() {
         $('.seeResults').on('click', function () {
             $('.imagery').fadeOut(1000, function () {
                 $('.imagery').html(``);
+                results();
             });
             $('.video').fadeOut(1000, function () {
                 $('.video').html(``);
             });
             $('.questionAnswerForm').fadeOut(1000);
             $('.score-tally').fadeOut(1000);
-            results();
         });
     } else {
         $('.answerResponse').html(`
@@ -227,6 +234,44 @@ function answerIncorrect() {
     console.log('`answerIncorrect` ran');
 };
 
+//Alert the user to select an answer next time
+function noAnswer() {
+    $('.audioAnswer').html(`
+        <audio id="audio" autoplay>
+            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0z2IiP8Pqvs.mp3" type="audio/mp3">
+        </audio>`);
+    let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
+    let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;
+    if (questionNumber === 10) {
+        $('.answerResponse').html(`
+            <p class="important">In the Fog, if you don't act, you die.</p>
+            <p class="basicText">The correct answer was: ${correctAnswer}</p>
+            <button type="submit" class="seeResults">See Your Results</button>`);
+        $('.questionAnswerForm').fadeOut(1000, function () {
+            $('.answerResponse').fadeIn(1000);
+        });
+        $('.seeResults').on('click', function () {
+            $('.imagery').fadeOut(1000, function () {
+                $('.imagery').html(``);
+                results();
+            });
+            $('.video').fadeOut(1000);
+            $('.questionAnswerForm').fadeOut(1000);
+            $('.score-tally').fadeOut(1000);
+        });
+    } else {
+        $('.answerResponse').html(`
+            <p class="important">In the Fog, if you don't act, you die.</p>
+            <p class="important">Try choosing an answer next round.</p>
+            <p class="basicText">The correct answer was: ${correctAnswer}</p>
+            <button type="submit" class="nextQuestionButton">Next Question</button>`);
+        $('.questionAnswerForm').fadeOut(1000, function () {
+            $('.answerResponse').fadeIn(1000);
+        });
+    };  
+    console.log('`answerCorrect` ran');
+};
+
 //Push answer imagery to user
 //Present a next question button, on click runs next question
 //If last question, present results button
@@ -237,10 +282,10 @@ function presentImagery() {
     let audio = `${STORE[questionNumber - 1].audio}`;
     let audio2 = `${STORE[questionNumber - 1].audio2}`;
     let video = `${STORE[questionNumber - 1].video}`;
-    $('.imagery').fadeIn(1000);
-    $('.video').fadeIn(1000);
     $('.imagery').html(`<img src="${imagery}" alt="${alt}">`);
     $('.video').html(`<iframe src="${video}" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture;"></iframe>`);
+    $('.imagery').fadeIn(1000);
+    $('.video').fadeIn(1000);
     if (audio2 = 'null') {
         $('.audio').html(`
         <audio id="audio" autoplay>
@@ -254,7 +299,7 @@ function presentImagery() {
         <audio id="audio" autoplay>
             <source src="${audio2}" type="audio/ogg">
         </audio>`)
-    }
+    };
     $('.nextQuestionButton').on('click', function () {
         $('.imagery').fadeOut(1000, function () {
             $('.imagery').html(``);
@@ -272,14 +317,22 @@ function presentImagery() {
 
 //Determine the results of the quiz
 function results() {
+    $('.video').css({
+        height: '100%'
+    });
+    $('.imagery').css({
+        alignItems: 'center',
+        justifyContent: 'center'
+    });
     $('.music').html(`
         <audio id="audio" autoplay loop>
             <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0J4xJJEqRZO.mp3" type="audio/mp3">
         </audio>`);
     $('.imagery').html(`
-    <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/" alt="Buy Dead By Daylight on Steam!<a>
-    <a href="https://deadbydaylight.fandom.com/wiki/Dead_By_Daylight_Wikia" alt="Check out the Dead By Daylight Wikia to learn more!<a>
-    <a href="hhttps://forum.deadbydaylight.com/en/categories" alt="Browse the Dead By Daylight Forums!<a>`);
+    <img src="https://store-images.s-microsoft.com/image/apps.20660.64366672042187759.338407e0-1372-451a-8800-aae18d4c72c2.7f12d862-297e-46fb-9e3c-e49be610d740?mode=scale&q=90&h=1080&w=1920" alt="Main Trapper Branding">
+    <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/" alt="Dead By Daylight on Steam" target="_blank">Buy Dead By Daylight on Steam!</a>
+    <a href="https://deadbydaylight.fandom.com/wiki/Dead_By_Daylight_Wikia" alt="Dead By Daylight Wikia" target="_blank">Check out the Dead By Daylight Wikia to learn more!</a>
+    <a href="hhttps://forum.deadbydaylight.com/en/categories" alt="Dead By Daylight Forums" target="_blank">Browse the Dead By Daylight Forums!</a>`);
     $('.video').html(`
     <iframe src="https://player.twitch.tv/?channel=tru3ta1ent" frameborder="0" scrolling="no"></iframe>
     <a href="https://www.twitch.tv/directory/game/Dead%20by%20Daylight" alt="Dead By Daylight on Twitch">Watch Dead By Daylight played live on Twitch!<a>
@@ -336,12 +389,21 @@ function restartQuiz() {
         <audio id="audio" autoplay loop>
             <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0ZnZ4R6oRjL.mp3" type="audio/mp3">
         </audio>`);
-        $('.imagery').fadeOut(1000);
-        $('.video').fadeOut(1000);
+        $('.imagery').fadeOut(1000, function () {
+            $('.imagery').css({
+                alignItems: 'flex-end',
+                justifyContent: 'flex-end'
+            });
+        });
+        $('.video').fadeOut(1000, function () {
+            $('.video').css({
+                height: '50%',
+            });
+        });
         shuffle(STORE);
         for (let i = 0; i < 10; i++) {
             shuffle(STORE[i]['answers']);
-        }
+        };
         $('.imagery').fadeOut(1000);
         $('.questionAnswerForm').fadeOut(1000, function () {
             document.getElementById('scoreNumber').innerHTML = '0';
@@ -351,61 +413,6 @@ function restartQuiz() {
     });
     console.log('`restartQuiz` ran');
 };
-
-//Shuffle the quiz questions so they are different each time
-function shuffle(array, x) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }  
-    return array;
-};
-
-//Begin the quiz
-//Shuffle quiz questions and answers so the user cannot cheat ;)
-function runQuiz() {
-    $('.imagery').fadeIn(1000);
-    $('.video').fadeIn(1000);
-    $('.quizStart').html(`
-    <p class="important">Think you can survive the Fog?</p>
-        <button type="button" class="startButton">Enter the Fog</button>`);
-    $('.quizStart').fadeIn(1000);
-    shuffle(STORE);
-    for (let i = 0; i < 10; i++) {
-        shuffle(STORE[i]['answers']);
-    }
-    beginQuiz();
-    $('.score-tally').css({
-        display: 'none'
-    });
-    $('.questionAnswerForm').css({
-        display: 'none'
-    });
-    console.log('`runQuiz` ran');
-};
-
-function audioWarning() {
-    $('.warningButton').on('click', function () {
-        $('.quizStart').fadeOut(1000, function () {
-            runQuiz();
-        });
-        $('.music').html(`
-        <audio id="audio" autoplay loop>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0J4xJJEqRZO.mp3" type="audio/mp3">
-        </audio>`);
-    });
-    console.log('`audioWarning` ran');
-}
 
 audioWarning();
 

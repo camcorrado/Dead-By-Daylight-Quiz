@@ -105,7 +105,7 @@ const STORE = [
       alt: 'Killer Closing The Hatch GIF'
     },
     {
-      question: 'Which Survivor used to work as a pizza deliveryman before being taken by The Entity?',
+      question: 'Which Survivor was a pizza deliveryman before being taken by The Entity?',
       answers: [
         'David King',
         'Jake Park',
