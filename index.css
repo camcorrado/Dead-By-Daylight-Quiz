@@ -1,0 +1,267 @@
+/* TO DO LIST
+- Media Queries
+*/
+
+* {
+    box-sizing: border-box;
+    transform-origin: center;
+    font-family: 'Crimson Text';
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    background-color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: scroll;
+}
+
+.image-assets {
+    height: 100%;
+    width: 33.33%;
+  }
+
+.imagery {
+    display: none;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+.imagery > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+main {
+    height: 100%;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.dbd-logo {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.begin-prompt {
+    width: 100%;
+}
+
+.tallies {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#questionNumber, #scoreNumber {
+    font-size: 1em;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    right: 20px;
+}
+
+
+.questionAnswerForm {
+    width: 100%;
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+    max-height: 100%;
+}
+
+label {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    max-height: 20%;
+    border: 2px solid darkred;
+    border-radius: 1px;
+    margin: 10px auto;
+    background-color: darkred;
+}
+
+button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 2px solid darkslategray;
+    border-radius: 1px;
+    margin: 10px auto;
+    background-color: darkslategray;
+}
+
+span {
+    padding: 10px;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+input[type='radio']:checked ~ span {
+    background-color: red;
+}
+
+.answerResponse {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+  
+.video-assets {
+    height: 100%;
+    width: 33.33%;
+  }
+
+.video {
+    display: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.video > iframe {
+    width: 560px;
+    height: 315px;
+    margin: 30px;
+}
+
+a {
+    color: white;
+    font-size: 1.2em;
+    text-shadow: -2px 2px 2px black;
+}
+
+.important {
+    font-size: 1.5em;
+    padding-top: 5px;
+    text-align: center;
+    line-height: 1em;
+    text-shadow: -2px 2px 2px black;
+}
+
+.basicText {
+    font-size: 1.2em;
+    padding-top: 5px;
+    text-align: center;
+    text-shadow: -2px 2px 2px black;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    /*video not clickable idk why
+    */
+
+    main {
+        width: 100%;
+        max-height: 66%;
+    }
+
+    .image-assets, .video-assets {
+        width: 50%;
+        max-height: 33%;
+        padding: 0px 25px;
+        margin-top: auto;
+        position: fixed;
+        bottom: 0px;
+        overflow: scroll;
+    }
+
+    .image-assets {
+        left: 0px;
+    }
+
+    .imagery {
+        align-items: flex-start;
+    }
+
+    .video-assets {
+        right: 0px;
+        z-index: 0;
+    }
+
+    .video > iframe {
+        max-width: 100%;
+        max-height: 50%;
+    }
+}
+
+@media only screen and (max-width: 812px) {
+
+    .important {
+        font-size: 1.2em;
+    }
+    
+    .basicText {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+
+    .important {
+        font-size: 1em;
+    }
+    
+    .basicText {
+        font-size: 0.7em;
+    }
+
+    button, span {
+        line-height: .25em;
+        max-height: 30px;
+    }
+
+    .video > iframe {
+        margin: 20px;
+    }
+}
+
