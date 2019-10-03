@@ -12,7 +12,7 @@ Recently studying HTML, CSS, Javascript, and jQuery, a quiz was a great place to
 
 ![begin quiz](https://i.imgur.com/mYebDCt.png)
 
-![quiz question (unanswered)](https://i.imgur.com/DIsbxtA.png)
+![quiz question (unanswered)](https://i.imgur.com/oOUt0gl.png)
 
 ![quiz question (answered incorrectly)](https://i.imgur.com/HE7LmR0.png)
 
