@@ -8,17 +8,17 @@ Recently studying HTML, CSS, Javascript, and jQuery, a quiz was a great place to
 
 ## Screenshots
 
-![landing page](https://i.imgur.com/I9lcuvJ.png)
+![landing page](https://i.imgur.com/jVxsHpF.png)
 
-![begin quiz](https://i.imgur.com/PGcJaOS.png)
+![begin quiz](https://i.imgur.com/mYebDCt.png)
 
 ![quiz question (unanswered)](https://i.imgur.com/DIsbxtA.png)
 
-![quiz question (answered incorrectly)](https://i.imgur.com/angiTOr.png)
+![quiz question (answered incorrectly)](https://i.imgur.com/HE7LmR0.png)
 
-![quiz question (answered correctly)](https://i.imgur.com/cmuLgZy.png)
+![quiz question (answered correctly)](https://i.imgur.com/hWq50gZ.png)
 
-![results](https://i.imgur.com/4OR7Trf.png)
+![results](https://i.imgur.com/A2rLayV.png)
 
 ## Built With
 
