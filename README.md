@@ -1,6 +1,6 @@
 # Dead By Daylight Quiz
 
-Gardener allows users to have all the information for their garden in one place: watering frequency, fertilizer frequency, mature height, and more! Users can also see how current and prospective plants will fair within their hardiness zone.
+Test your knowledge of the hit asymmetrical horror game, Dead By Daylight! Can you survive the fog?
 
 ## Motivation
 
