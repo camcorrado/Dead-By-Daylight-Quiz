@@ -4,7 +4,7 @@ Test your knowledge of the hit asymmetrical horror game, Dead By Daylight! Can y
 
 ## Motivation
 
-Recently studying HTML, CSS, Javascript, and jQuery, a quiz was a great place to practice what I have learned. With Dead By Daylight as one of my favorite video game, it was an easy choice for content. The quiz provides the user feedback and at the end, resources to learn more about Dead By Daylight.
+Recently studying HTML, CSS, JavaScript, and jQuery, a quiz was a great place to practice what I have learned. With Dead By Daylight as one of my favorite video game, it was an easy choice for content. The quiz provides the user feedback and at the end, resources to learn more about Dead By Daylight.
 
 ## Screenshots
 
@@ -24,7 +24,7 @@ Recently studying HTML, CSS, Javascript, and jQuery, a quiz was a great place to
 
 * HTML
 * CSS
-* Javascript
+* JavaScript
 * jQuery
 * Adobe Photoshop
 * Adobe Audition
