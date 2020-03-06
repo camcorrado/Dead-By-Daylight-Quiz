@@ -23,7 +23,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: scroll;
-    padding: 5px;
 }
 
 main {
@@ -173,22 +172,18 @@ button {
         background-size: cover;
         background-repeat: no-repeat;
         overflow: scroll;
-        padding: 5px;
-        border: 1px solid yellow;
     }
 
     main {
         height: 100%;
         width: 33.33%;
         z-index: 1;
-        border: 1px solid red;
     }
 
     .image-assets, .video-assets {
         display: flex;
         height: 100%;
         width: 33.33%;
-        border: 1px solid blue;
     }
 
     .imagery {
@@ -220,12 +215,12 @@ button {
         justify-content: space-around;
         align-content: center;
         text-align: center;
-        width: auto;
+        width: 100%;
     }
 
     iframe {
-        max-width: 100%;
-        max-height: 100%;
-        margin: auto;
+        width: auto;
+        height: 100%;
+        margin: 20px;
     }
 }

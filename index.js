@@ -9,14 +9,12 @@ JS:
 function changeQuestionNumber () {
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     document.getElementById('questionNumber').innerHTML = questionNumber + 1;
-    console.log('`changeQuestionNumber` ran');
 };
 
 //Score tally to show user their standing and determing end results
 function updateScore () {
     let currentScore = Number(document.getElementById('scoreNumber').innerHTML);
     document.getElementById('scoreNumber').innerHTML = currentScore + 1;
-    console.log('`updateScore` ran');
 };
 
 //Shuffle the quiz questions so they are different each time
@@ -42,17 +40,16 @@ function audioWarning() {
         });
         $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0J4xJJEqRZO.mp3" type="audio/mp3">
+            <source src="" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     });
-    console.log('`audioWarning` ran');
 };
 
 //Begin the quiz
 //Shuffle quiz questions and answers so the user cannot cheat ;)
 function runQuiz() {
     $('.quizStart').html(`
-    <p class="important">Think you can survive the Fog?</p>
+    <p class="important">Think you have what it takes to survive the Fog?</p>
         <button type="button" class="startButton">Enter the Fog</button>`);
     $('.quizStart').fadeIn(1000);
     shuffle(STORE);
@@ -66,7 +63,6 @@ function runQuiz() {
         display: 'none'
     });
     beginQuiz();
-    console.log('`runQuiz` ran');
 };
 
 //Button prompt to begin the quiz
@@ -82,11 +78,11 @@ function beginQuiz() {
         </ul>`);
         $('.audio').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0o7eykWiNDC.mp3" type="audio/mp3">
+            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0o7eykWiNDC.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0ZnZ4R6oRjL.mp3" type="audio/mp3">
+            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0ZnZ4R6oRjL.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.begin-prompt').fadeOut(1000, function () {
             $('.score-tally').fadeIn(1000);
@@ -104,7 +100,6 @@ function beginQuiz() {
             fontSize: '16px'
         }, 1500)
     });
-    console.log('`beginQuiz` ran');
 };
 
 //Each question will appear with four possible answers
@@ -140,7 +135,6 @@ function presentQuestion() {
                         </fieldset>
             </div>`);      
     };
-    console.log('`presentQuestion` ran');
 };
 
 //When an answer is submitted, check if it is correct, incorrect, or no answer was selected
@@ -162,7 +156,6 @@ function submitAnswer() {
         };
         presentImagery();
     });
-    console.log('`submitAnswer` ran');
 };
 
 //Congratulate the user
@@ -170,7 +163,7 @@ function answerCorrect() {
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0qAzX2fNlPu.mp3" type="audio/mp3">
+            <source src="https://audio.clyp.it/tadt1rnk.mp3?Expires=1583547408&Signature=uPU7c~2kcwWZ2QGOMzw262Be~FUXDFNChxJNfLywazwXcJqhI6Caer8sghdhL7bAyzH-R~Rvby-HHvQI8lOrmjtMF7hAZX4AXR7kKi1FiKntHuszzr9rmBPq44jBzGPTl-pzZsMd9Q3RpTgIUpeane2w281aevXq-7vCpdxjfI0_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     if (questionNumber === 10) {
         $('.answerResponse').html(`
@@ -197,14 +190,13 @@ function answerCorrect() {
             $('.answerResponse').fadeIn(1000);
         });
     };  
-    console.log('`answerCorrect` ran');
 };
 
 //Inform the user
 function answerIncorrect() {
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0iWJ04COMFB.mp3" type="audio/mp3">
+            <source src="https://audio.clyp.it/m44ttf53.mp3?Expires=1583547582&Signature=l2ZyHEk81sA-Ey9nXgSZmb3J5Abbkq7kIfqk2onEIjeTuRXDEgUyeWvhEDqmj~7BmC36Az0bFoIObQqKzshx~TvginzUKaUpgJpUGEfNDFELhngK1NazvLcjXPRKTQAgY5VPe4SueWW61H80p0yWIP0yFy6vHfjvtcpQCp0KurM_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;
@@ -233,14 +225,13 @@ function answerIncorrect() {
             $('.answerResponse').fadeIn(1000);
         });
     };
-    console.log('`answerIncorrect` ran');
 };
 
 //Alert the user to select an answer next time
 function noAnswer() {
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0z2IiP8Pqvs.mp3" type="audio/mp3">
+            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0z2IiP8Pqvs.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;
@@ -270,7 +261,6 @@ function noAnswer() {
             $('.answerResponse').fadeIn(1000);
         });
     };  
-    console.log('`answerCorrect` ran');
 };
 
 //Push answer imagery to user
@@ -284,18 +274,18 @@ function presentImagery() {
     let audio2 = `${STORE[questionNumber - 1].audio2}`;
     $('.imagery').html(`<img src="${imagery}" alt="${alt}">`);
     $('.imagery').fadeIn(1000);
-    if (audio2 = 'null') {
+    if (audio2 === 'null') {
         $('.audio').html(`
         <audio id="audio" autoplay>
-            <source src="${audio}" type="audio/mp3">
-        </audio>`)
+            <source src="${audio}" type="audio/mp3" crossorigin="anonymous">
+        </audio>`);
     } else {
         $('.audio').html(`
         <audio id="audio" autoplay>
-            <source src="${audio}" type="audio/mp3">
+            <source src="${audio}" type="audio/mp3" crossorigin="anonymous">
         </audio>
         <audio id="audio" autoplay>
-            <source src="${audio2}" type="audio/ogg">
+            <source src="${audio2}" type="audio/mp3" crossorigin="anonymous">
         </audio>`)
     };
     $('.nextQuestionButton').on('click', function () {
@@ -321,7 +311,7 @@ function results() {
     });
     $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0J4xJJEqRZO.mp3" type="audio/mp3">
+            <source src="https://audio.clyp.it/arrhnpmf.mp3?Expires=1583544309&Signature=ILN9ld8r39Awwm83Zw~Gi~a4IN6DnjmvUQRgMgTaW~WSUjeY3ImJujCrmZ0oApnQKlNgn00BB~13C8eNAD1O239mUqNhNg2jPD4Fd43qsWolW~L2Y~aBNYTA0VBcByw5jYh28F1B1k8aQgChu3DQ0-uliQz1tNNuimA9er62gTU_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     $('.imagery').html(`
     <img src="https://store-images.s-microsoft.com/image/apps.20660.64366672042187759.338407e0-1372-451a-8800-aae18d4c72c2.7f12d862-297e-46fb-9e3c-e49be610d740?mode=scale&q=90&h=1080&w=1920" alt="Main Trapper Branding">
@@ -330,9 +320,9 @@ function results() {
     <a href="hhttps://forum.deadbydaylight.com/en/categories" alt="Dead By Daylight Forums" target="_blank">Browse the Dead By Daylight Forums!</a>`);
     $('.video').html(`
     <iframe src="https://player.twitch.tv/?channel=tru3ta1ent" frameborder="0" scrolling="no"></iframe>
-    <a href="https://www.twitch.tv/directory/game/Dead%20by%20Daylight" alt="Dead By Daylight on Twitch">Watch Dead By Daylight played live on Twitch!</a>
+    <a href="https://www.twitch.tv/directory/game/Dead%20by%20Daylight" alt="Dead By Daylight on Twitch" target="_blank">Watch Dead By Daylight played live on Twitch!</a>
     <iframe src="https://www.youtube.com/embed/PqGzYaiiMlY" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture;"></iframe>
-    <a href="https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos" alt="Dead By Daylight Official YouTube Channel">Watch Dead By Daylight content on YouTube!<a>`);
+    <a href="https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos" alt="Dead By Daylight Official YouTube Channel" target="_blank">Watch Dead By Daylight content on YouTube!<a>`);
     $('.imagery').fadeIn(1000);
     $('.video').fadeIn(1000);
     document.getElementById('questionNumber').innerHTML = '0';
@@ -343,7 +333,6 @@ function results() {
     } else {
         loser();
     };
-    console.log('`results` ran');
 };
 
 //If the user got 7+/10 correct, they survive the fog.
@@ -357,7 +346,6 @@ function winner() {
                                     <button type="submit" class="retakeQuiz">Take The Quiz Again!</button>
                                     <img src="https://i.imgur.com/jfXSMDb.jpg" alt="Dead By Daylight Trapper Main Branding>`).fadeIn(1000);
     restartQuiz();
-    console.log('`winner` ran');
 };
 
 //If the user got 7-/10 correct, they died.
@@ -370,7 +358,6 @@ function loser() {
                                     <button type="submit" class="retakeQuiz">Try Again</button>
                                     <img src="https://i.imgur.com/jfXSMDb.jpg" alt="Dead By Daylight Trapper Main Branding>`).fadeIn(1000);
     restartQuiz();
-    console.log('`loser` ran');
 };
 
 //Reset the quiz
@@ -378,11 +365,11 @@ function restartQuiz() {
     $('.retakeQuiz').on('click', function () {
         $('.audio').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0o7eykWiNDC.mp3" type="audio/mp3">
+            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0o7eykWiNDC.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0ZnZ4R6oRjL.mp3" type="audio/mp3">
+            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0ZnZ4R6oRjL.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.imagery').fadeOut(1000, function () {
             $('.imagery').css({
@@ -406,7 +393,6 @@ function restartQuiz() {
             presentQuestion();
         });
     });
-    console.log('`restartQuiz` ran');
 };
 
 audioWarning();
