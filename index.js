@@ -97,6 +97,12 @@ function beginQuiz() {
             maxWidth: '50%',
             top: '0px'
             }, 1500);
+        $('.game-title').animate({
+            fontSize: '24px'
+        }, 1500)
+        $('.game-slogan').animate({
+            fontSize: '16px'
+        }, 1500)
     });
     console.log('`beginQuiz` ran');
 };
@@ -179,7 +185,6 @@ function answerCorrect() {
                 $('.imagery').html(``);
                 results();
             });
-            $('.video').fadeOut(1000);
             $('.questionAnswerForm').fadeOut(1000);
             $('.score-tally').fadeOut(1000);
         });
@@ -215,9 +220,6 @@ function answerIncorrect() {
             $('.imagery').fadeOut(1000, function () {
                 $('.imagery').html(``);
                 results();
-            });
-            $('.video').fadeOut(1000, function () {
-                $('.video').html(``);
             });
             $('.questionAnswerForm').fadeOut(1000);
             $('.score-tally').fadeOut(1000);
@@ -255,7 +257,6 @@ function noAnswer() {
                 $('.imagery').html(``);
                 results();
             });
-            $('.video').fadeOut(1000);
             $('.questionAnswerForm').fadeOut(1000);
             $('.score-tally').fadeOut(1000);
         });
@@ -281,11 +282,8 @@ function presentImagery() {
     let alt = `${STORE[questionNumber - 1].alt}`;
     let audio = `${STORE[questionNumber - 1].audio}`;
     let audio2 = `${STORE[questionNumber - 1].audio2}`;
-    let video = `${STORE[questionNumber - 1].video}`;
     $('.imagery').html(`<img src="${imagery}" alt="${alt}">`);
-    $('.video').html(`<iframe src="${video}" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture;"></iframe>`);
     $('.imagery').fadeIn(1000);
-    $('.video').fadeIn(1000);
     if (audio2 = 'null') {
         $('.audio').html(`
         <audio id="audio" autoplay>
@@ -303,9 +301,6 @@ function presentImagery() {
     $('.nextQuestionButton').on('click', function () {
         $('.imagery').fadeOut(1000, function () {
             $('.imagery').html(``);
-        });
-        $('.video').fadeOut(1000, function () {
-            $('.video').html(``);
         });
         $('.answerResponse').fadeOut(1000);
         $('.nextQuestionButton').fadeOut(1000, function () {
@@ -335,7 +330,7 @@ function results() {
     <a href="hhttps://forum.deadbydaylight.com/en/categories" alt="Dead By Daylight Forums" target="_blank">Browse the Dead By Daylight Forums!</a>`);
     $('.video').html(`
     <iframe src="https://player.twitch.tv/?channel=tru3ta1ent" frameborder="0" scrolling="no"></iframe>
-    <a href="https://www.twitch.tv/directory/game/Dead%20by%20Daylight" alt="Dead By Daylight on Twitch">Watch Dead By Daylight played live on Twitch!<a>
+    <a href="https://www.twitch.tv/directory/game/Dead%20by%20Daylight" alt="Dead By Daylight on Twitch">Watch Dead By Daylight played live on Twitch!</a>
     <iframe src="https://www.youtube.com/embed/PqGzYaiiMlY" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture;"></iframe>
     <a href="https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos" alt="Dead By Daylight Official YouTube Channel">Watch Dead By Daylight content on YouTube!<a>`);
     $('.imagery').fadeIn(1000);
@@ -391,7 +386,7 @@ function restartQuiz() {
         </audio>`);
         $('.imagery').fadeOut(1000, function () {
             $('.imagery').css({
-                alignItems: 'flex-end',
+                alignItems: 'center',
                 justifyContent: 'flex-end'
             });
         });

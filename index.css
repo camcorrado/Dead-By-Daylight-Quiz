@@ -1,4 +1,6 @@
 * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     transform-origin: center;
     font-family: 'Crimson Text';
@@ -8,6 +10,7 @@
 html, body {
     height: 100%;
     background-color: black;
+    min-width: 320px;
 }
 
 body {
@@ -20,37 +23,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     overflow: scroll;
-}
-
-.image-assets {
-    height: 100%;
-    width: 33.33%;
-  }
-
-.imagery {
-    display: none;
-    height: 100%;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-  }
-
-.imagery > img {
-    max-width: 100%;
-    max-height: 100%;
+    padding: 5px;
 }
 
 main {
-    height: 100%;
-    width: 33.33%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    z-index: 1;
-  }
+    width: 100%;
+}
 
 header {
     width: 100%;
@@ -60,15 +38,46 @@ header {
     align-items: center;
     justify-content: center;
     object-fit: contain;
+    margin-bottom: 10px;;
 }
 
 .dbd-logo {
-    max-width: 100%;
+    max-width: 75%;
     max-height: auto;
+    margin-top: 5px;
+    position: relative;
+    left: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 .begin-prompt {
-    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+p {
+    margin: 0 10px;
+}
+
+.important {
+    font-size: 24px;
+    text-align: center;
+}
+
+.basicText {
+    font-size: 18px;
+    text-align: center;
 }
 
 .tallies {
@@ -77,21 +86,27 @@ header {
     text-align: center;
     align-items: center;
     justify-content: center;
-}
-
-#questionNumber, #scoreNumber {
-    font-size: 1em;
-    padding: 0px;
+    margin-bottom: 10px;
 }
 
 li {
     list-style: none;
-    position: relative;
-    right: 20px;
 }
 
+#questionNumber, #scoreNumber {
+    font-size: 16px;
+    padding: 0px;
+    position: relative;
+    top: 0px;
+}
 
 .questionAnswerForm {
+    width: 100%;
+    text-align: center;
+}
+
+.answerResponse {
+    display: none;
     width: 100%;
     text-align: center;
 }
@@ -99,7 +114,8 @@ li {
 fieldset {
     border: none;
     width: 100%;
-    max-height: 100%;
+    max-width: 500px;
+    margin: auto;
 }
 
 label {
@@ -107,31 +123,18 @@ label {
     text-align: center;
     justify-content: center;
     width: 90%;
-    max-height: 20%;
+    height: 40px;
     border: 2px solid darkred;
     border-radius: 1px;
     margin: 10px auto;
     background-color: darkred;
 }
 
-button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 90%;
-    height: auto;
-    font-size: 1.2em;
-    padding: 10px;
-    border: 2px solid darkslategray;
-    border-radius: 1px;
-    margin: 10px auto;
-    background-color: darkslategray;
-}
-
 span {
-    padding: 10px;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 18px;
+    height: 100%;
+    padding-top: 5px;
 }
 
 input[type='radio'] {
@@ -142,131 +145,87 @@ input[type='radio']:checked ~ span {
     background-color: red;
 }
 
-.answerResponse {
-    display: none;
-    width: 100%;
-    text-align: center;
-}
-  
-.video-assets {
-    height: 100%;
-    width: 33.33%;
+button {
     display: flex;
-    align-items: center;
+    text-align: center;
     justify-content: center;
-    flex-direction: column;
-  }
-
-.video {
-    display: none;
-    height: 33.33%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+    height: 40px;
+    width: 90%;
+    font-size: 18px;
+    border: 2px solid darkslategray;
+    border-radius: 1px;
+    margin: 10px auto;
+    background-color: darkslategray;
 }
 
-iframe {
-    width: 100%;
-    height: 100%;
+.image-assets, .video-assets {
+  display: none;
 }
 
-.imagery > a, .video > a {
-    color: white;
-    font-size: 1.2em;
-    text-shadow: -2px 2px 2px black;
-    margin: 20px;
-}
-
-.important {
-    font-size: 1.5em;
-    padding-top: 5px;
-    text-align: center;
-    line-height: 1em;
-    text-shadow: -2px 2px 2px black;
-}
-
-.basicText {
-    font-size: 1.2em;
-    padding-top: 5px;
-    text-align: center;
-    line-height: 1em;
-    text-shadow: -2px 2px 2px black;
-}
-
-p {
-    margin: 2px;
-}
-
-@media only screen and (max-width: 1024px) {
+@media (orientation: landscape) {
     body {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: stretch;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: scroll;
+        padding: 5px;
+        border: 1px solid yellow;
     }
 
     main {
-        width: 100%;
-        max-height: 66.33%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
+        height: 100%;
+        width: 33.33%;
+        z-index: 1;
+        border: 1px solid red;
     }
 
     .image-assets, .video-assets {
-        position: absolute;
-        bottom: 0px;
-        width: 50%;
-        max-height: 33.3%;
+        display: flex;
+        height: 100%;
+        width: 33.33%;
+        border: 1px solid blue;
     }
 
-    .image-assets {
-        left: 0px;
-        bottom: 0px;
+    .imagery {
+        height: 100%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        text-align: center;
     }
 
-    .video-assets {
-        right: 0px;
+    .imagery > img {
+        max-width: 100%;
+        max-height: 100%;
     }
 
-    .video {
-        position: absolute;
-        top: 25%;
-        height: 50%;
-    }
-}
-
-@media only screen and (max-width: 850px) {
-
-    .important {
-        font-size: 1.2em;
-    }
-    
-    .basicText {
-        font-size: 0.9em;
-    }
-
-    .video {
-        height: 33%;
-    }
-}
-
-@media only screen and (max-width: 568px) {
-
-    .important {
-        font-size: 1em;
-    }
-    
-    .basicText {
-        font-size: 0.7em;
-    }
-
-    button, span {
-        line-height: .25em;
-        max-height: 30px;
-    }
-
-    .video > iframe {
+    .imagery > a, .video > a {
+        color: white;
+        font-size: 18px;
+        text-shadow: -2px 2px 2px black;
         margin: 20px;
     }
-}
 
+    .video {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        text-align: center;
+        width: auto;
+    }
+
+    iframe {
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+    }
+}
