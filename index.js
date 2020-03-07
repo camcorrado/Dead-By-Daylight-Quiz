@@ -163,7 +163,7 @@ function answerCorrect() {
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://audio.clyp.it/tadt1rnk.mp3?Expires=1583547408&Signature=uPU7c~2kcwWZ2QGOMzw262Be~FUXDFNChxJNfLywazwXcJqhI6Caer8sghdhL7bAyzH-R~Rvby-HHvQI8lOrmjtMF7hAZX4AXR7kKi1FiKntHuszzr9rmBPq44jBzGPTl-pzZsMd9Q3RpTgIUpeane2w281aevXq-7vCpdxjfI0_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt?e=download&authuser=0" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     if (questionNumber === 10) {
         $('.answerResponse').html(`
@@ -196,7 +196,7 @@ function answerCorrect() {
 function answerIncorrect() {
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://audio.clyp.it/m44ttf53.mp3?Expires=1583547582&Signature=l2ZyHEk81sA-Ey9nXgSZmb3J5Abbkq7kIfqk2onEIjeTuRXDEgUyeWvhEDqmj~7BmC36Az0bFoIObQqKzshx~TvginzUKaUpgJpUGEfNDFELhngK1NazvLcjXPRKTQAgY5VPe4SueWW61H80p0yWIP0yFy6vHfjvtcpQCp0KurM_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt?e=download&authuser=0" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;
@@ -231,7 +231,7 @@ function answerIncorrect() {
 function noAnswer() {
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0z2IiP8Pqvs.mp3" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt?e=download&authuser=0" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;

@@ -9,8 +9,8 @@ const STORE = [
         ],
       correctAnswer: 'The Shape',
       icon: 'https://i.imgur.com/TEcUh6h.png',
-      audio: 'https://audio.clyp.it/yktsxycu.mp3?Expires=1583541458&Signature=I~ObtVTDu2JeeHkzJ5bh04Bz2vUT0~HR6vi~t1KuZE53c0h9w~1XxX0mg3yGHU6NQk3gY474JIAoqXzQiUr8mzBFmcy12BonF2SC8hQe9-I5Ot3oM~eh2kTTFOHmbd3o5bO78hYLnWxw8h8SCxJB-PDARX~7DB0A0ZLOXJvDam0_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
-      audio2: 'https://audio.clyp.it/t1hpj4rt.mp3?Expires=1583542811&Signature=RXTJgpVCYviedG~7-W9DYDQC2XcADwJ0WrlQCgv79mfW4fynTn20lg4Kjwcd0rZJ86rowgLM3eF42kQY91xvTShGYy9vf9PHzsPxxRiSySGrHEVIwB55P1MigxE3QB2HQIl-l6WdsYl1iMeOvYyPu7g1cR6SmAEV4sCP7UDxENc_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
+      audio: 'https://doc-0s-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/mscle0i0hn40op7cqa38oomhh3ohh5c4/1583568600000/04977444650423645334/04977444650423645334/1z9F6c0PM3waYNv_UawXSKi1JX6t5sjI9',
+      audio2: 'https://doc-10-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/93r1bc09kasloehneptdi22832jte6np/1583568675000/04977444650423645334/04977444650423645334/1iJZmILMdH-zA41DogOq8ilfp7RWkNo9l',
       alt: 'Michael Myers Character Model'
     },
     {
@@ -23,8 +23,8 @@ const STORE = [
         ],
         correctAnswer: 'The Clown',
         icon: 'https://i.imgur.com/IJKuYCw.png',
-        audio: 'https://audio.clyp.it/ca3yybbh.mp3?Expires=1583546871&Signature=UIugf6b7F5aW0Qtc3VU4rb96SoJJr9cZfX9Ss39sbVtJnom4bB9j2xX4KV~hcVqDVoyBfsuCIUk7a8H~JsnRJoyyuSYhA0yKwxQsks6hi0TckUqCiGXil1MW0hiQbea9earL4DuguCJ6k~Rx-rWAsHxC-dJXD2PCskPPYihLvGQ_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
-        audio2: 'https://audio.clyp.it/qcn2utpi.mp3?Expires=1583546935&Signature=CduihDtU-552DfGOPa~8nCjyZHyeCF9BH45I5YsFLstvl0legs-cAjwMl~TqNU0J-RY2MplAFyh8e56~kbZb3hfw1cApdfc4l6piugsm2U5fkCSKLrUDByL~sAMlEutBB1xyxV8wNTJUnhWlB078XKMAqpJ7~1COpyaWwLxRATM_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
+        audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+        audio2: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
         alt: 'The Clown Character Model'
     },
     {
@@ -37,7 +37,7 @@ const STORE = [
         ],
         correctAnswer: 'Adam Francis',
         icon: 'https://i.imgur.com/yTLLbQ8.png',
-        audio: 'https://audio.clyp.it/fyiqaoso.mp3?Expires=1583547330&Signature=coC2x2Cc5hpS-6zPeq1UHfze8jZfrRvk31znF4rwfWfsAzocnH42WoN2FsG~~fDk8izzYG8wtNU00ADD~0t1Uo~PPa4k1cmjjXTQvUJutERyHGPM3HG1LBxyeTJT12IPL2TO6yQM~QF-nwGlqumsok4LvHR8oW-mscUUq~JObSw_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
+        audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/tg8uub0kq1ekh4s59uo0tc6tr44ui5m9/1583569575000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
         audio2: null,
         alt: 'Adam Francis Character Model'
     },
@@ -51,8 +51,8 @@ const STORE = [
         ],
       correctAnswer: 'Dying Light',
       icon: 'https://i.imgur.com/0tpq4Xo.png',
-      audio: 'https://s0.vocaroo.com/media/download_temp/Vocaroo_s0uvzCQODj5Z.mp3',
-      audio2: 'https://s0.vocaroo.com/media/download_temp/Vocaroo_s0AnMid3ptH0.mp3',
+      audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+      audio2: null,
       alt: 'Dying Light Perk Icon'
     },
     {
@@ -65,8 +65,8 @@ const STORE = [
         ],
       correctAnswer: 'The Hag',
       icon: 'https://i.imgur.com/pXpeP8b.png',
-      audio: 'https://s0.vocaroo.com/media/download_temp/Vocaroo_s04pUKUNDEyR.mp3',
-      audio2: 'https://s0.vocaroo.com/media/download_temp/Vocaroo_s081PwyhFKb3.mp3',
+      audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+      audio2: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
       alt: 'The Hag Character Artwork'
     },
     {
@@ -79,7 +79,7 @@ const STORE = [
         ],
       correctAnswer: 'Hooks',
       icon: 'https://i.imgur.com/RRpwdl0.png',
-      audio: 'https://s0.vocaroo.com/media/download_temp/Vocaroo_s0UKC5QkJokt.mp3',
+      audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
       audio2: null,
       alt: 'Lunar New Year Hook Artwork'
     },
@@ -93,7 +93,7 @@ const STORE = [
       ],
       correctAnswer: 'Vigo',
       icon: 'https://i.imgur.com/r1ruMkt.png',
-      audio: 'https://audio.clyp.it/qf2j2xah.mp3?Expires=1583549096&Signature=XJn20t116bwZXaZ9ZPmsvui4h4IFOfGanMd4nBnuSBAxBxubCmPT~8uM3xx1yAfw~SzrKvEPKYKfM2X0CkEOhvWHcnfzc0EYo8XPBRSJyxoQYlb7cuPdkwYKRed0~zAHEFRCWboLFnVUJ5gUceUjG0tPJQ1KFxgpbhHDyc8c5ro_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
+      audio: 'https://doc-0g-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/qjcn083jvtubr9h8o3tfej1tndtu1i8q/1583568825000/04977444650423645334/04977444650423645334/1kS4UmmdYBwhOT9O5JnBCwfesifQ7myKE',
       audio2: null,
       alt: 'The Hatch'
     },
@@ -107,7 +107,7 @@ const STORE = [
       ],
       correctAnswer: 'Dwight Fairfield',
       icon: 'https://i.imgur.com/KbBocwW.png',
-      audio: 'https://audio.clyp.it/hjvkv5d2.mp3?Expires=1583541153&Signature=O9IgeutJtdq5IeM~TTr59NbKGJ3vrSBfTiMy7nrtk6FjaWDxDSOKLXDvj9rkKR0t1jcJPdGCPSiyVY~g-ZhjCzZXsNBbnADSMC9VFBBdfRm2ApR0w7F3k6SZd9YHd6uwdgGh9Qhjew4UA97XRPgjj1WtrJVI3rjitGzKv-qn6zY_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
+      audio: 'https://doc-0k-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/jh2rvc9eqb9ofqso923sk9f9bd37jo0t/1583568900000/04977444650423645334/04977444650423645334/1IDtnYOD_TeVwMKPi5sTq1CyO1P7kHZgh',
       audio2: null,
       alt: 'Dwight Fairfield in his Pizza Delivery Skin'
     },
@@ -121,8 +121,8 @@ const STORE = [
       ],
       correctAnswer: 'Cleansing a Totem',
       icon: 'https://i.imgur.com/b0so6mb.png',
-      audio: 'https://audio.clyp.it/bok42ztp.mp3?Expires=1583545843&Signature=NGUy~EzSstw0L6eEpMuQTy2m-T2DM9nvcT2p-vfUqLOCQoBIoq10CUK3bWKJBaS-FCTqkvo1Zau8z45LmsCzv4m8hDIUlLf7e-7EQLytOSh1DlIPVwaou2ozUw68SwzWIArpXVYpJwotGq1pfv6IaSdNNvKctnQO~k0NRbBgC4M_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
-      audio2: 'https://audio.clyp.it/xawaoe5d.mp3?Expires=1583545891&Signature=ILRJRraYrbmYmguZBGt2aQ4wQSSD-NFLDz7jIzg9SJ1RVV~3bWq~zMeRUqKFSbLeZOhmjIwN7R~Q3OtBg3D5mX3oTbBMrcSe62xBKRFDHpS-pcUzjmqdHGAIfwUQrrFIbmITtwU9R-yj2Lfw98NzcSXj~Ec8XG0cphaBFfKDd1c_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
+      audio: 'https://doc-0c-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5hn261unbipj8c01ie1ha7adglma23c1/1583567100000/04977444650423645334/04977444650423645334/1QaqZefYv4N0hVwhhV19BShXu7gGU7nZr',
+      audio2: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
       alt: 'Hex Totem'
     },
     {
@@ -135,7 +135,7 @@ const STORE = [
     ],
     correctAnswer: 'The Ghost',
     icon: 'https://i.imgur.com/oNnrSFi.png',
-    audio: 'https://audio.clyp.it/t024jv4n.mp3?Expires=1583548815&Signature=DcH3qIiy01RYXqEF0bhO90NBVAtk98WdW~9zzzzhncrp-nZFhbs46ZxzBMK6ak2ftKxChCKM53sJW-f0nHYY~~4JMWIXfud2s1JzKzk9z4COqPe4dZQ3XGMt83Jq6~XHLGBlWjPOSYo9Jmkb2gZFLpvVvsH~y-xz63JnOAFedrU_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA',
+    audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
     audio2: null,
     alt: 'Ghostface Character Model Artwork'
     }
