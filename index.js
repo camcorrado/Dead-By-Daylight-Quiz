@@ -40,7 +40,7 @@ function audioWarning() {
         });
         $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Main+Menu.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     });
 };
@@ -78,11 +78,11 @@ function beginQuiz() {
         </ul>`);
         $('.audio').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0o7eykWiNDC.mp3" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Start.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0ZnZ4R6oRjL.mp3" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Quiz+Background+Music.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.begin-prompt').fadeOut(1000, function () {
             $('.score-tally').fadeIn(1000);
@@ -154,7 +154,6 @@ function submitAnswer() {
         } else {
             answerIncorrect();
         };
-        presentImagery();
     });
 };
 
@@ -163,7 +162,7 @@ function answerCorrect() {
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt?e=download&authuser=0" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Correct.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     if (questionNumber === 10) {
         $('.answerResponse').html(`
@@ -189,14 +188,15 @@ function answerCorrect() {
             updateScore();
             $('.answerResponse').fadeIn(1000);
         });
-    };  
+    };
+    setTimeout(presentImagery, 1000);  
 };
 
 //Inform the user
 function answerIncorrect() {
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt?e=download&authuser=0" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Incorrect.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;
@@ -225,13 +225,14 @@ function answerIncorrect() {
             $('.answerResponse').fadeIn(1000);
         });
     };
+    setTimeout(presentImagery, 1000); 
 };
 
 //Alert the user to select an answer next time
 function noAnswer() {
     $('.audioAnswer').html(`
         <audio id="audio" autoplay>
-            <source src="https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt?e=download&authuser=0" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/No+Answer.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     let questionNumber = Number(document.getElementById('questionNumber').innerHTML);
     let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`;
@@ -260,7 +261,8 @@ function noAnswer() {
         $('.questionAnswerForm').fadeOut(1000, function () {
             $('.answerResponse').fadeIn(1000);
         });
-    };  
+    };
+    setTimeout(presentImagery, 1000);   
 };
 
 //Push answer imagery to user
@@ -311,18 +313,18 @@ function results() {
     });
     $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="https://audio.clyp.it/arrhnpmf.mp3?Expires=1583544309&Signature=ILN9ld8r39Awwm83Zw~Gi~a4IN6DnjmvUQRgMgTaW~WSUjeY3ImJujCrmZ0oApnQKlNgn00BB~13C8eNAD1O239mUqNhNg2jPD4Fd43qsWolW~L2Y~aBNYTA0VBcByw5jYh28F1B1k8aQgChu3DQ0-uliQz1tNNuimA9er62gTU_&Key-Pair-Id=APKAJ4AMQB3XYIRCZ5PA" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Survivor+Theme.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
     $('.imagery').html(`
     <img src="https://store-images.s-microsoft.com/image/apps.20660.64366672042187759.338407e0-1372-451a-8800-aae18d4c72c2.7f12d862-297e-46fb-9e3c-e49be610d740?mode=scale&q=90&h=1080&w=1920" alt="Main Trapper Branding">
     <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/" alt="Dead By Daylight on Steam" target="_blank">Buy Dead By Daylight on Steam!</a>
     <a href="https://deadbydaylight.fandom.com/wiki/Dead_By_Daylight_Wikia" alt="Dead By Daylight Wikia" target="_blank">Check out the Dead By Daylight Wikia to learn more!</a>
-    <a href="hhttps://forum.deadbydaylight.com/en/categories" alt="Dead By Daylight Forums" target="_blank">Browse the Dead By Daylight Forums!</a>`);
+    <a href="https://forum.deadbydaylight.com/" alt="Dead By Daylight Forums" target="_blank">Browse the Dead By Daylight Forums!</a>`);
     $('.video').html(`
-    <iframe src="https://player.twitch.tv/?channel=tru3ta1ent" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://player.twitch.tv/?channel=tru3ta1ent" frameborder="0" scrolling="no" SameSite='None'></iframe>
     <a href="https://www.twitch.tv/directory/game/Dead%20by%20Daylight" alt="Dead By Daylight on Twitch" target="_blank">Watch Dead By Daylight played live on Twitch!</a>
-    <iframe src="https://www.youtube.com/embed/PqGzYaiiMlY" frameborder="0" allow="accelerometer; gyroscope; picture-in-picture;"></iframe>
-    <a href="https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos" alt="Dead By Daylight Official YouTube Channel" target="_blank">Watch Dead By Daylight content on YouTube!<a>`);
+    <iframe src="https://www.youtube.com/embed/PqGzYaiiMlY" frameborder="0" SameSite='None' allow="accelerometer; gyroscope; picture-in-picture;"></iframe>
+    <a href="https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos" SameSite='None' alt="Dead By Daylight Official YouTube Channel" target="_blank">Watch Dead By Daylight content on YouTube!<a>`);
     $('.imagery').fadeIn(1000);
     $('.video').fadeIn(1000);
     document.getElementById('questionNumber').innerHTML = '0';
@@ -365,11 +367,11 @@ function restartQuiz() {
     $('.retakeQuiz').on('click', function () {
         $('.audio').html(`
         <audio id="audio" autoplay>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0o7eykWiNDC.mp3" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Start.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.music').html(`
         <audio id="audio" autoplay loop>
-            <source src="https://s0.vocaroo.com/media/download_temp/Vocaroo_s0ZnZ4R6oRjL.mp3" type="audio/mp3" crossorigin="anonymous">
+            <source src="https://dbd-quiz.s3.us-east-2.amazonaws.com/Quiz+Background+Music.mp3" type="audio/mp3" crossorigin="anonymous">
         </audio>`);
         $('.imagery').fadeOut(1000, function () {
             $('.imagery').css({

@@ -9,8 +9,8 @@ const STORE = [
         ],
       correctAnswer: 'The Shape',
       icon: 'https://i.imgur.com/TEcUh6h.png',
-      audio: 'https://doc-0s-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/mscle0i0hn40op7cqa38oomhh3ohh5c4/1583568600000/04977444650423645334/04977444650423645334/1z9F6c0PM3waYNv_UawXSKi1JX6t5sjI9',
-      audio2: 'https://doc-10-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/93r1bc09kasloehneptdi22832jte6np/1583568675000/04977444650423645334/04977444650423645334/1iJZmILMdH-zA41DogOq8ilfp7RWkNo9l',
+      audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Shape+Breathing.mp3',
+      audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Shape+Tier.mp3',
       alt: 'Michael Myers Character Model'
     },
     {
@@ -23,8 +23,8 @@ const STORE = [
         ],
         correctAnswer: 'The Clown',
         icon: 'https://i.imgur.com/IJKuYCw.png',
-        audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
-        audio2: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+        audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Clown+Bottle.mp3',
+        audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Clown+Laugh.mp3',
         alt: 'The Clown Character Model'
     },
     {
@@ -37,7 +37,7 @@ const STORE = [
         ],
         correctAnswer: 'Adam Francis',
         icon: 'https://i.imgur.com/yTLLbQ8.png',
-        audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/tg8uub0kq1ekh4s59uo0tc6tr44ui5m9/1583569575000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+        audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Adam.mp3',
         audio2: null,
         alt: 'Adam Francis Character Model'
     },
@@ -51,7 +51,7 @@ const STORE = [
         ],
       correctAnswer: 'Dying Light',
       icon: 'https://i.imgur.com/0tpq4Xo.png',
-      audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+      audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jump+Scare.mp3',
       audio2: null,
       alt: 'Dying Light Perk Icon'
     },
@@ -65,8 +65,8 @@ const STORE = [
         ],
       correctAnswer: 'The Hag',
       icon: 'https://i.imgur.com/pXpeP8b.png',
-      audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
-      audio2: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+      audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hag+Sound.mp3',
+      audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hag+Teleport.mp3',
       alt: 'The Hag Character Artwork'
     },
     {
@@ -79,7 +79,7 @@ const STORE = [
         ],
       correctAnswer: 'Hooks',
       icon: 'https://i.imgur.com/RRpwdl0.png',
-      audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+      audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hook+Sabo.mp3',
       audio2: null,
       alt: 'Lunar New Year Hook Artwork'
     },
@@ -93,7 +93,7 @@ const STORE = [
       ],
       correctAnswer: 'Vigo',
       icon: 'https://i.imgur.com/r1ruMkt.png',
-      audio: 'https://doc-0g-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/qjcn083jvtubr9h8o3tfej1tndtu1i8q/1583568825000/04977444650423645334/04977444650423645334/1kS4UmmdYBwhOT9O5JnBCwfesifQ7myKE',
+      audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hatch.mp3',
       audio2: null,
       alt: 'The Hatch'
     },
@@ -107,7 +107,7 @@ const STORE = [
       ],
       correctAnswer: 'Dwight Fairfield',
       icon: 'https://i.imgur.com/KbBocwW.png',
-      audio: 'https://doc-0k-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/jh2rvc9eqb9ofqso923sk9f9bd37jo0t/1583568900000/04977444650423645334/04977444650423645334/1IDtnYOD_TeVwMKPi5sTq1CyO1P7kHZgh',
+      audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Dwight.mp3',
       audio2: null,
       alt: 'Dwight Fairfield in his Pizza Delivery Skin'
     },
@@ -121,8 +121,8 @@ const STORE = [
       ],
       correctAnswer: 'Cleansing a Totem',
       icon: 'https://i.imgur.com/b0so6mb.png',
-      audio: 'https://doc-0c-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5hn261unbipj8c01ie1ha7adglma23c1/1583567100000/04977444650423645334/04977444650423645334/1QaqZefYv4N0hVwhhV19BShXu7gGU7nZr',
-      audio2: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+      audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Totem+Break.mp3',
+      audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Totem+Cleanse.mp3',
       alt: 'Hex Totem'
     },
     {
@@ -135,7 +135,7 @@ const STORE = [
     ],
     correctAnswer: 'The Ghost',
     icon: 'https://i.imgur.com/oNnrSFi.png',
-    audio: 'https://doc-04-10-docs.googleusercontent.com/docs/securesc/prrq6b726gedquif80mtp6jfj78b3mu5/5esase6cpcq5b44cdar8oqo1up338uvq/1583567325000/04977444650423645334/04977444650423645334/14b72dO9FD4dC2vVaMODXubNO-VvnUbUt',
+    audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Ghostface.mp3',
     audio2: null,
     alt: 'Ghostface Character Model Artwork'
     }
