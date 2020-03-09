@@ -11,7 +11,7 @@ const STORE = [
     icon: 'https://i.imgur.com/TEcUh6h.png',
     audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Shape+Breathing.mp3',
     audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Shape+Tier.mp3',
-    alt: 'Michael Myers Character Model'
+    alt: 'Michael Myers Artwork'
   },
   {
     question: 'Which Killer does not wear a mask?',
@@ -22,10 +22,10 @@ const STORE = [
       'The Huntress'
       ],
       correctAnswer: 'The Clown',
-      icon: 'https://i.imgur.com/IJKuYCw.png',
+      icon: 'https://i.imgur.com/CFlCcdu.png',
       audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Clown+Bottle.mp3',
       audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Clown+Laugh.mp3',
-      alt: 'The Clown Character Model'
+      alt: 'The Clown Artwork'
   },
   {
     question: 'Which Survivor was taken by the Entity while onboard a train?',
@@ -36,10 +36,10 @@ const STORE = [
       'Feng Min'
       ],
       correctAnswer: 'Adam Francis',
-      icon: 'https://i.imgur.com/yTLLbQ8.png',
+      icon: 'https://i.imgur.com/JDk7dfM.png',
       audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Adam.mp3',
       audio2: null,
-      alt: 'Adam Francis Character Model'
+      alt: 'Adam Francis Artwork'
   },
   {
     question: 'Of these perks, which is not a Hex?',
@@ -50,7 +50,7 @@ const STORE = [
       'Dying Light'
       ],
     correctAnswer: 'Dying Light',
-    icon: 'https://i.imgur.com/0tpq4Xo.png',
+    icon: 'https://i.imgur.com/VARg20l.png',
     audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jump+Scare.mp3',
     audio2: null,
     alt: 'Dying Light Perk Icon'
@@ -67,7 +67,7 @@ const STORE = [
     icon: 'https://i.imgur.com/pXpeP8b.png',
     audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hag+Sound.mp3',
     audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hag+Teleport.mp3',
-    alt: 'The Hag Character Artwork'
+    alt: 'The Hag Artwork'
   },
   {
     question: 'What type of aura does the perk Boil Over obscure?',
@@ -106,7 +106,7 @@ const STORE = [
       'Jeff Johansen'
     ],
     correctAnswer: 'Dwight Fairfield',
-    icon: 'https://i.imgur.com/KbBocwW.png',
+    icon: 'https://i.imgur.com/sta9JI5.png',
     audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Dwight.mp3',
     audio2: null,
     alt: 'Dwight Fairfield in his Pizza Delivery Skin'
@@ -128,15 +128,85 @@ const STORE = [
   {
     question: 'Which Killer’s chapter is the only chapter to not release a Survivor?',
     answers: [
-      'The Ghost',
+      'The Ghost Face',
       'The Cannibal',
       'The Doctor',
       'The Plague'
   ],
-  correctAnswer: 'The Ghost',
-  icon: 'https://i.imgur.com/oNnrSFi.png',
+  correctAnswer: 'The Ghost Face',
+  icon: 'https://i.imgur.com/HesUwqX.png',
   audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Ghostface.mp3',
   audio2: null,
-  alt: 'Ghostface Character Model Artwork'
+  alt: 'Ghost Face Character Model Artwork'
+  },
+  {
+    question: 'Which Killer is related to The Spirit?',
+    answers: [
+      'The Nea',
+      'The Plague',
+      'The Oni',
+      'The Nightmare'
+  ],
+  correctAnswer: 'The Oni',
+  icon: 'https://i.imgur.com/x3CfeEh.png',
+  audio: '',
+  audio2: null,
+  alt: 'The Oni Artwork'
+  },
+  {
+    question: 'Camaraderie is a perk that belong to which character?',
+    answers: [
+      'The Demogorgon',
+      'Steve Harrington',
+      'Nancy Wheeker',
+      'William "Bill" Overbeck'
+  ],
+  correctAnswer: 'Steve Harrington',
+  icon: 'https://i.imgur.com/kyAQtAW.png',
+  audio: '',
+  audio2: null,
+  alt: 'Steve Harrington Artwork'
+  },
+  {
+    question: 'Which of thes is not a voiceline for Ash Williams?',
+    answers: [
+      'Groovy',
+      'What now',
+      "Look who's shittin' in the tall grass",
+      'Catch ya on the flip-flop'
+  ],
+  correctAnswer: 'Catch ya on the flip-flop',
+  icon: 'https://i.imgur.com/rTFrhD1.png',
+  audio: '',
+  audio2: null,
+  alt: 'Ash Williams Artwork'
+  },
+  {
+    question: 'Which Killer perk can only be activated during the End Game Collapse?',
+    answers: [
+      'Blood Warden',
+      'Cruel Limits',
+      'Zanshin Tactics',
+      'Rancor'
+  ],
+  correctAnswer: 'Blood Warden',
+  icon: 'https://i.imgur.com/oZJ7K6P.png',
+  audio: '',
+  audio2: null,
+  alt: 'Blood Warden Perk Icon'
+  },
+  {
+    question: 'Which perk does not cause the exhaustion status effect?',
+    answers: [
+      'Head On',
+      'Balanced Landing',
+      'Dead Hard',
+      'Dance With Me'
+  ],
+  correctAnswer: 'Dance With Me',
+  icon: 'https://i.imgur.com/cCwLBEJ.png',
+  audio: '',
+  audio2: null,
+  alt: 'Dance With Me Perk Icon'
   }
 ]

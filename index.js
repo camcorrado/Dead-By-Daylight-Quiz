@@ -293,7 +293,7 @@ function results() {
     <a href='https://deadbydaylight.fandom.com/wiki/Dead_By_Daylight_Wikia' alt='Dead By Daylight Wikia' target='_blank'>Check out the Dead By Daylight Wikia to learn more!</a>
     <a href='https://forum.deadbydaylight.com/' alt='Dead By Daylight Forums' target='_blank'>Browse the Dead By Daylight Forums!</a>`)
   $('.video').html(`
-    <iframe src='https://player.twitch.tv/?channel=tru3ta1ent' frameborder='0' scrolling='no' SameSite='None'></iframe>
+    <iframe src='https://player.twitch.tv/?channel=otzdarva' frameborder='0' scrolling='no' SameSite='None'></iframe>
     <a href='https://www.twitch.tv/directory/game/Dead%20by%20Daylight' alt='Dead By Daylight on Twitch' target='_blank'>Watch Dead By Daylight played live on Twitch!</a>
     <iframe src='https://www.youtube.com/embed/PqGzYaiiMlY' frameborder='0' SameSite='None' allow='accelerometer; gyroscope; picture-in-picture;'></iframe>
     <a href='https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos' SameSite='None' alt='Dead By Daylight Official YouTube Channel' target='_blank'>Watch Dead By Daylight content on YouTube!<a>`)

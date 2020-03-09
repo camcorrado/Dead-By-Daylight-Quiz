@@ -181,13 +181,15 @@ button {
     justify-content: flex-end;
     height: 100%;
     width: 100%;
-    padding: 5px;
+    padding: 0px 5px;
     text-align: center;
   }
 
   .imagery > img {
+    height: auto;
     max-height: 100%;
     max-width: 100%;
+    object-fit: contain;
   }
 
   .imagery > a, .video > a {
