@@ -1,160 +1,155 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    transform-origin: center;
-    font-family: 'Crimson Text';
-    color: white;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Crimson Text';
+  margin: 0;
+  padding: 0;
+  transform-origin: center;
 }
 
 html, body {
-    height: 100%;
-    background-color: black;
-    min-width: 320px;
+  background-color: black;
+  height: 100%;
+  min-width: 320px;
 }
 
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: stretch;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: scroll;
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    object-fit: contain;
-    margin-bottom: 10px;;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .dbd-logo {
-    max-width: 75%;
-    max-height: auto;
-    margin-top: 5px;
-    position: relative;
-    left: 5px;
+  margin-top: 5px;
+  max-width: 40%;
+  max-height: auto;
+  position: relative;
+  left: 5px;
 }
 
-a {
-    text-decoration: none;
+.logo>a {
+  text-decoration: none;
 }
 
 h1 {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 h2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .begin-prompt {
-    max-width: 500px;
-    margin: auto;
+  margin: auto;
+  max-width: 500px;
 }
 
 p {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .important {
-    font-size: 24px;
-    text-align: center;
+  font-size: 24px;
+  text-align: center;
 }
 
 .basicText {
-    font-size: 18px;
-    text-align: center;
-}
-
-.tallies {
-    width: 100%;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
 }
 
 li {
-    list-style: none;
+  list-style: none;
+}
+
+.tallies {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
 }
 
 #questionNumber, #scoreNumber {
-    font-size: 16px;
-    padding: 0px;
-    position: relative;
-    top: 0px;
+  font-size: 16px;
+  padding: 0px;
+  position: relative;
+  top: 0px;
 }
 
 .questionAnswerForm {
-    width: 100%;
-    text-align: center;
+  text-align: center;
+  width: 100%;
 }
 
 .answerResponse {
-    display: none;
-    width: 100%;
-    text-align: center;
+  display: none;
+  text-align: center;
+  width: 100%;
 }
 
 fieldset {
-    border: none;
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
+  border: none;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
 }
 
 label {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 90%;
-    height: 40px;
-    border: 2px solid darkred;
-    border-radius: 1px;
-    margin: 10px auto;
-    background-color: darkred;
+  background-color: darkred;
+  border: 2px solid darkred;
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
 }
 
 span {
-    width: 100%;
-    font-size: 18px;
-    height: 100%;
-    padding-top: 5px;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
 }
 
 input[type='radio'] {
-    display: none;
+  display: none;
 }
 
 input[type='radio']:checked ~ span {
-    background-color: red;
+  background-color: red;
 }
 
 button {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    height: 40px;
-    width: 90%;
-    font-size: 18px;
-    border: 2px solid darkslategray;
-    border-radius: 1px;
-    margin: 10px auto;
-    background-color: darkslategray;
+  background-color: darkslategray;
+  border: 2px solid darkslategray;
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  height: 40px;
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
 }
 
 .image-assets, .video-assets {
@@ -162,65 +157,53 @@ button {
 }
 
 @media (orientation: landscape) {
-    body {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        align-content: stretch;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        overflow: scroll;
-    }
 
-    main {
-        height: 100%;
-        width: 33.33%;
-        z-index: 1;
-    }
+  main {
+    height: 100%;
+    width: 33.33%;
+    z-index: 1;
+  }
 
-    .image-assets, .video-assets {
-        display: flex;
-        height: 100%;
-        width: 33.33%;
-    }
+  .dbd-logo {
+    max-width: 100%;
+    min-width: 75%;
+  }
 
-    .imagery {
-        height: 100%;
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        flex-direction: column;
-        text-align: center;
-    }
+  .image-assets, .video-assets {
+    display: flex;
+    height: 100%;
+    width: 33.33%;
+  }
 
-    .imagery > img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+  .imagery {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+  }
 
-    .imagery > a, .video > a {
-        color: white;
-        font-size: 18px;
-        text-shadow: -2px 2px 2px black;
-        margin: 20px;
-    }
+  .imagery > img {
+    max-height: 100%;
+    max-width: 100%;
+  }
 
-    .video {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-content: center;
-        text-align: center;
-        width: 100%;
-    }
+  .imagery > a, .video > a {
+    color: white;
+    font-size: 18px;
+    margin: 20px;
+  }
 
-    iframe {
-        width: auto;
-        height: 100%;
-        margin: 20px;
-    }
+  .video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+  }
 }
