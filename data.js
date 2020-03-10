@@ -140,44 +140,44 @@ const STORE = [
   alt: 'Ghost Face Character Model Artwork'
   },
   {
-    question: 'Which Killer is related to The Spirit?',
+    question: 'Which Killer is related to The Oni?',
     answers: [
       'The Nea',
       'The Plague',
-      'The Oni',
+      'The Spirit',
       'The Nightmare'
   ],
-  correctAnswer: 'The Oni',
-  icon: 'https://i.imgur.com/x3CfeEh.png',
-  audio: '',
-  audio2: null,
-  alt: 'The Oni Artwork'
+  correctAnswer: 'The Spirit',
+  icon: 'https://i.imgur.com/ZRqVMZT.png',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Spirit+Glass.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Spirit+Voice.mp3',
+  alt: 'The Spirit Artwork'
   },
   {
     question: 'Camaraderie is a perk that belong to which character?',
     answers: [
       'The Demogorgon',
       'Steve Harrington',
-      'Nancy Wheeker',
+      'Nancy Wheeler',
       'William "Bill" Overbeck'
   ],
   correctAnswer: 'Steve Harrington',
   icon: 'https://i.imgur.com/kyAQtAW.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Stranger_Things_Theme_Music_.mp3',
   audio2: null,
   alt: 'Steve Harrington Artwork'
   },
   {
     question: 'Which of thes is not a voiceline for Ash Williams?',
     answers: [
-      'Groovy',
-      'What now',
-      "Look who's shittin' in the tall grass",
-      'Catch ya on the flip-flop'
+      'What is this place?',
+      'What now?',
+      "Look who's shittin' in the tall grass.",
+      'Catch ya on the flip-flop.'
   ],
   correctAnswer: 'Catch ya on the flip-flop',
   icon: 'https://i.imgur.com/rTFrhD1.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Groovy.mp3',
   audio2: null,
   alt: 'Ash Williams Artwork'
   },
@@ -191,8 +191,8 @@ const STORE = [
   ],
   correctAnswer: 'Blood Warden',
   icon: 'https://i.imgur.com/oZJ7K6P.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Freddy+Glove.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Freddy+Laugh.mp3',
   alt: 'Blood Warden Perk Icon'
   },
   {
@@ -205,7 +205,7 @@ const STORE = [
   ],
   correctAnswer: 'Dance With Me',
   icon: 'https://i.imgur.com/cCwLBEJ.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Kate+Scream.mp3',
   audio2: null,
   alt: 'Dance With Me Perk Icon'
   }
