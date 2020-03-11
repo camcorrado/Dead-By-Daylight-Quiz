@@ -24,29 +24,29 @@ function shuffle(array) {
 
 function audioWarning() {
   $('.warningButton').on('click', function () {
-    $('.quizStart').fadeOut(1000, function () {
-      runQuiz()
-    })
     $('.music').html(`
       <audio id='audio' autoplay loop>
         <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Main+Menu.mp3' type='audio/mp3' crossorigin='anonymous'>
       </audio>`)
+    $('.quizStart').fadeOut(1000, function () {
+      runQuiz()
+    })
   })
 }
 
 function runQuiz() {
-  $('.quizStart').html(`
-    <p class='important'>Think you have what it takes to survive the Fog?</p>
-    <button type='button' class='startButton'>Enter the Fog</button>`)
-  $('.quizStart').fadeIn(1000)
   shuffle(STORE)
   for (let i = 0; i < 10; i++) {
     shuffle(STORE[i]['answers'])
   }
-  $('.score-tally').css({
+  $('.questionAnswerForm').css({
     display: 'none'
   })
-  $('.questionAnswerForm').css({
+  $('.quizStart').fadeIn(1000)
+  $('.quizStart').html(`
+    <p class='important'>Think you have what it takes to survive the Fog?</p>
+    <button type='button' class='startButton'>Enter the Fog</button>`)
+  $('.score-tally').css({
     display: 'none'
   })
   beginQuiz()
@@ -54,20 +54,10 @@ function runQuiz() {
 
 function beginQuiz() {
   $('.imagery').fadeOut(1000)
-  $('.video').fadeOut(1000)
   $('.startButton').on('click', function () {
-    $('.score-tally').html(`
-      <ul>
-        <li>Question: <span id='questionNumber'>0</span>/10</li>
-        <li>Score: <span id='scoreNumber'>0</span></li>
-      </ul>`)
     $('.audio').html(`
       <audio id='audio' autoplay>
         <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Start.mp3' type='audio/mp3' crossorigin='anonymous'>
-      </audio>`)
-    $('.music').html(`
-      <audio id='audio' autoplay loop>
-        <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Quiz+Background+Music.mp3' type='audio/mp3' crossorigin='anonymous'>
       </audio>`)
     $('.begin-prompt').fadeOut(1000, function () {
       $('.score-tally').fadeIn(1000)
@@ -84,12 +74,22 @@ function beginQuiz() {
     $('.game-slogan').animate({
       fontSize: '16px'
       }, 1500)
+    $('.music').html(`
+      <audio id='audio' autoplay loop>
+        <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Quiz+Background+Music.mp3' type='audio/mp3' crossorigin='anonymous'>
+      </audio>`)
+    $('.score-tally').html(`
+      <ul>
+        <li>Question: <span id='questionNumber'>0</span>/10</li>
+        <li>Score: <span id='scoreNumber'>0</span></li>
+      </ul>`)
   })
+  $('.video').fadeOut(1000)
 }
 
 function presentQuestion() {
-  $('.questionAnswerForm').fadeIn(1000)
   let questionNumber = document.getElementById('questionNumber').innerHTML
+  $('.questionAnswerForm').fadeIn(1000)
   if (questionNumber < STORE.length) {
     changeQuestionNumber()
     $('.questionAnswerForm').html(`
@@ -147,36 +147,36 @@ function answerCorrect() {
       <p class='important'>Correct. You survived this round...</p>
       <button type='submit' class='seeResults'>See Your Results</button>`)
     $('.questionAnswerForm').fadeOut(1000, function () {
-      updateScore()
       $('.answerResponse').fadeIn(1000)
+      updateScore()
     })
     $('.seeResults').on('click', function () {
+      $('.answerResponse').fadeOut(1000)
+      $('.score-tally').fadeOut(1000)
       $('.imagery').fadeOut(1000, function () {
         $('.imagery').html(``)
         results()
       })
-      $('.questionAnswerForm').fadeOut(1000)
-      $('.score-tally').fadeOut(1000)
     })
   } else {
     $('.answerResponse').html(`
       <p class='important'>Correct. You survived this round...</p>
       <button type='submit' class='nextQuestionButton'>Next Question</button>`)
     $('.questionAnswerForm').fadeOut(1000, function () {
-      updateScore()
       $('.answerResponse').fadeIn(1000)
+      updateScore()
     })
   }
   setTimeout(presentImagery, 1000)
 }
 
 function answerIncorrect() {
+  let questionNumber = Number(document.getElementById('questionNumber').innerHTML)
+  let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`
   $('.audioAnswer').html(`
     <audio id='audio' autoplay>
       <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Incorrect.mp3' type='audio/mp3' crossorigin='anonymous'>
     </audio>`)
-  let questionNumber = Number(document.getElementById('questionNumber').innerHTML)
-  let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`
   if (questionNumber === 10) {
   $('.answerResponse').html(`
     <p class='important'>Incorrect. Your heartbeat intensifies as the killer grows closers...</p>
@@ -186,12 +186,11 @@ function answerIncorrect() {
     $('.answerResponse').fadeIn(1000)
   })
   $('.seeResults').on('click', function () {
+    $('.score-tally').fadeOut(1000)
     $('.imagery').fadeOut(1000, function () {
       $('.imagery').html(``)
       results()
     })
-    $('.questionAnswerForm').fadeOut(1000)
-    $('.score-tally').fadeOut(1000)
   })
   } else {
     $('.answerResponse').html(`
@@ -206,12 +205,12 @@ function answerIncorrect() {
 }
 
 function noAnswer() {
+  let questionNumber = Number(document.getElementById('questionNumber').innerHTML)
+  let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`
   $('.audioAnswer').html(`
     <audio id='audio' autoplay>
       <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/No+Answer+NEW.mp3' type='audio/mp3' crossorigin='anonymous'>
     </audio>`)
-  let questionNumber = Number(document.getElementById('questionNumber').innerHTML)
-  let correctAnswer = `${STORE[questionNumber - 1].correctAnswer}`
   if (questionNumber === 10) {
   $('.answerResponse').html(`
     <p class='important'>In the Fog, if you don't act, you die.</p>
@@ -221,12 +220,11 @@ function noAnswer() {
     $('.answerResponse').fadeIn(1000)
   })
   $('.seeResults').on('click', function () {
+    $('.score-tally').fadeOut(1000)
     $('.imagery').fadeOut(1000, function () {
       $('.imagery').html(``)
       results()
     })
-    $('.questionAnswerForm').fadeOut(1000)
-    $('.score-tally').fadeOut(1000)
   })
   } else {
     $('.answerResponse').html(`
@@ -243,10 +241,10 @@ function noAnswer() {
 
 function presentImagery() {
   let questionNumber = Number(document.getElementById('questionNumber').innerHTML)
-  let imagery = `${STORE[questionNumber - 1].icon}`
   let alt = `${STORE[questionNumber - 1].alt}`
   let audio = `${STORE[questionNumber - 1].audio}`
   let audio2 = `${STORE[questionNumber - 1].audio2}`
+  let imagery = `${STORE[questionNumber - 1].icon}`
   $('.imagery').html(`<img src='${imagery}' alt='${alt}' crossorigin='anonymous'>`)
   $('.imagery').fadeIn(1000)
   if (audio2 === 'null') {
@@ -264,10 +262,10 @@ function presentImagery() {
     </audio>`)
   }
   $('.nextQuestionButton').on('click', function () {
+    $('.answerResponse').fadeOut(1000)
     $('.imagery').fadeOut(1000, function () {
       $('.imagery').html(``)
     })
-    $('.answerResponse').fadeOut(1000)
     $('.nextQuestionButton').fadeOut(1000, function () {
       $('.questionAnswerForm').fadeIn(1000)
       presentQuestion()
@@ -276,37 +274,36 @@ function presentImagery() {
 }
 
 function results() {
-  $('.video').css({
-    height: '100%'
-  })
-  $('.imagery').css({
-    alignItems: 'center',
-    justifyContent: 'center'
-  })
-  $('.music').html(`
-    <audio id='audio' autoplay loop>
-      <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Survivor+Theme.mp3' type='audio/mp3' crossorigin='anonymous'>
-    </audio>`)
-  $('.imagery').html(`
-    <img src='https://store-images.s-microsoft.com/image/apps.20660.64366672042187759.338407e0-1372-451a-8800-aae18d4c72c2.7f12d862-297e-46fb-9e3c-e49be610d740?mode=scale&q=90&h=1080&w=1920' alt='Main Trapper Branding' crossorigin='anonymous'>
-    <a href='https://store.steampowered.com/app/381210/Dead_by_Daylight/' alt='Dead By Daylight on Steam' target='_blank'>Buy Dead By Daylight on Steam!</a>
-    <a href='https://deadbydaylight.fandom.com/wiki/Dead_By_Daylight_Wikia' alt='Dead By Daylight Wikia' target='_blank'>Check out the Dead By Daylight Wikia to learn more!</a>
-    <a href='https://forum.deadbydaylight.com/' alt='Dead By Daylight Forums' target='_blank'>Browse the Dead By Daylight Forums!</a>`)
-  $('.video').html(`
-    <iframe src='https://player.twitch.tv/?channel=otzdarva' frameborder='0' scrolling='no' SameSite='None'></iframe>
-    <a href='https://www.twitch.tv/directory/game/Dead%20by%20Daylight' alt='Dead By Daylight on Twitch' target='_blank'>Watch Dead By Daylight played live on Twitch!</a>
-    <iframe src='https://www.youtube.com/embed/PqGzYaiiMlY' frameborder='0' SameSite='None' allow='accelerometer; gyroscope; picture-in-picture;'></iframe>
-    <a href='https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos' SameSite='None' alt='Dead By Daylight Official YouTube Channel' target='_blank'>Watch Dead By Daylight content on YouTube!<a>`)
-  $('.imagery').fadeIn(1000)
-  $('.video').fadeIn(1000)
-  document.getElementById('questionNumber').innerHTML = '0'
   let finalScore = Number(document.getElementById('scoreNumber').innerHTML)
-  $('.answerResponse').fadeOut(1000)
+  document.getElementById('questionNumber').innerHTML = '0'
   if (finalScore >= 7) {
     winner()
   } else {
     loser()
   }
+  $('.imagery').css({
+    alignItems: 'center',
+    justifyContent: 'center'
+  })
+  $('.imagery').html(`
+    <img src='https://store-images.s-microsoft.com/image/apps.20660.64366672042187759.338407e0-1372-451a-8800-aae18d4c72c2.7f12d862-297e-46fb-9e3c-e49be610d740?mode=scale&q=90&h=1080&w=1920' alt='Main Trapper Branding' crossorigin='anonymous'>
+    <a href='https://store.steampowered.com/app/381210/Dead_by_Daylight/' alt='Dead By Daylight on Steam' target='_blank'>Buy Dead By Daylight on Steam!</a>
+    <a href='https://deadbydaylight.fandom.com/wiki/Dead_By_Daylight_Wikia' alt='Dead By Daylight Wikia' target='_blank'>Check out the Dead By Daylight Wikia to learn more!</a>
+    <a href='https://forum.deadbydaylight.com/' alt='Dead By Daylight Forums' target='_blank'>Browse the Dead By Daylight Forums!</a>`)
+  $('.imagery').fadeIn(1000)
+  $('.music').html(`
+    <audio id='audio' autoplay loop>
+      <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Survivor+Theme.mp3' type='audio/mp3' crossorigin='anonymous'>
+    </audio>`)
+  $('.video').css({
+    height: '100%'
+  })
+  $('.video').html(`
+    <iframe src='https://player.twitch.tv/?channel=otzdarva' frameborder='0' scrolling='no' SameSite='None'></iframe>
+    <a href='https://www.twitch.tv/directory/game/Dead%20by%20Daylight' alt='Dead By Daylight on Twitch' target='_blank'>Watch Dead By Daylight played live on Twitch!</a>
+    <iframe src='https://www.youtube.com/embed/PqGzYaiiMlY' frameborder='0' SameSite='None' allow='accelerometer; gyroscope; picture-in-picture;'></iframe>
+    <a href='https://www.youtube.com/channel/UCaSgsFdGbwjfdawl3rOXiwQ/videos' SameSite='None' alt='Dead By Daylight Official YouTube Channel' target='_blank'>Watch Dead By Daylight content on YouTube!<a>`)
+  $('.video').fadeIn(1000)
 }
 
 function winner() {
@@ -315,7 +312,8 @@ function winner() {
     <p class='important'>You Survived!</p>
     <p class='basicText'>${finalScore}/10</p>
     <a href='https://www.deadbydaylight.com/en/age-gate' alt='Dead By Daylight official webpage' target='_blank'>Learn more about Dead By Daylight<a>
-    <button type='submit' class='retakeQuiz'>Take The Quiz Again!</button>`).fadeIn(1000)
+    <button type='submit' class='retakeQuiz'>Take The Quiz Again!</button>`)
+  $('.questionAnswerForm').fadeIn(1000)
   restartQuiz()
 }
 
@@ -324,19 +322,20 @@ function loser() {
   $('.questionAnswerForm').html(`
     <p class='important'>You were sacrificed to the Entity</p>
     <p class='basicText'>${finalScore}/10</p>
-    <button type='submit' class='retakeQuiz'>Try Again</button>`).fadeIn(1000)
+    <button type='submit' class='retakeQuiz'>Try Again</button>`)
+  $('.questionAnswerForm').fadeIn(1000)
   restartQuiz()
 }
 
 function restartQuiz() {
+  shuffle(STORE)
+    for (let i = 0; i < 10; i++) {
+      shuffle(STORE[i]['answers'])
+    }
   $('.retakeQuiz').on('click', function () {
     $('.audio').html(`
       <audio id='audio' autoplay>
         <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Start.mp3' type='audio/mp3' crossorigin='anonymous'>
-      </audio>`)
-    $('.music').html(`
-      <audio id='audio' autoplay loop>
-        <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Quiz+Background+Music.mp3' type='audio/mp3' crossorigin='anonymous'>
       </audio>`)
     $('.imagery').fadeOut(1000, function () {
       $('.imagery').css({
@@ -344,20 +343,19 @@ function restartQuiz() {
         justifyContent: 'flex-end'
       })
     })
-    $('.video').fadeOut(1000, function () {
-      $('.video').css({
-        height: '50%',
-      })
-    })
-    shuffle(STORE)
-    for (let i = 0; i < 10; i++) {
-      shuffle(STORE[i]['answers'])
-    }
-    $('.imagery').fadeOut(1000)
+    $('.music').html(`
+      <audio id='audio' autoplay loop>
+        <source src='https://dbd-quiz.s3.us-east-2.amazonaws.com/Quiz+Background+Music.mp3' type='audio/mp3' crossorigin='anonymous'>
+      </audio>`)
     $('.questionAnswerForm').fadeOut(1000, function () {
       document.getElementById('scoreNumber').innerHTML = '0'
       $('.score-tally').fadeIn(1000)
       presentQuestion()
+    })
+    $('.video').fadeOut(1000, function () {
+      $('.video').css({
+        height: '50%',
+      })
     })
   })
 }
