@@ -51,7 +51,7 @@ const STORE = [
       ],
     correctAnswer: 'Dying Light',
     icon: 'https://i.imgur.com/VARg20l.png',
-    audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Select+Item.mp3',
+    audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jump+Scare+2.mp3',
     audio2: null,
     alt: 'Dying Light Perk Icon'
   },
@@ -154,7 +154,7 @@ const STORE = [
   alt: 'The Spirit Artwork'
   },
   {
-    question: 'Camaraderie is a perk that belong to which character?',
+    question: 'Camaraderie is a perk that belongs to which character?',
     answers: [
       'The Demogorgon',
       'Steve Harrington',
@@ -164,7 +164,7 @@ const STORE = [
   correctAnswer: 'Steve Harrington',
   icon: 'https://i.imgur.com/kyAQtAW.png',
   audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Stranger_Things_Theme_Music_.mp3',
-  audio2: null,
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Steve.mp3',
   alt: 'Steve Harrington Artwork'
   },
   {
@@ -205,7 +205,7 @@ const STORE = [
   ],
   correctAnswer: 'Dance With Me',
   icon: 'https://i.imgur.com/cCwLBEJ.png',
-  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Kate+Scream.mp3',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Heartbeat.mp3',
   audio2: null,
   alt: 'Dance With Me Perk Icon'
   },
@@ -238,20 +238,6 @@ const STORE = [
   alt: 'Escaped Game Artwork'
   },
   {
-    question: 'Using which of these allows the Killer to kill a Survivor by their own hand?',
-    answers: [
-      'Judith\'s Tombstone',
-      'Amanda\'s Letter',
-      'Redhead\'s Pinky Finger',
-      'Renjiro\'s Bloody Glove'
-  ],
-  correctAnswer: 'Judith\'s Tombstone',
-  icon: 'https://i.imgur.com/eCX2dzL.png',
-  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jump+Scare+2.mp3',
-  audio2: null,
-  alt: 'Judith\'s Tombstone Add-On Artwork'
-  },
-  {
     question: 'Which Killer is from the earliest time period?',
     answers: [
       'The Plague',
@@ -261,7 +247,7 @@ const STORE = [
   ],
   correctAnswer: 'The Plague',
   icon: 'https://i.imgur.com/ty5dLfd.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Plague.mp3',
   audio2: null,
   alt: 'The Plague Artwork'
   },
@@ -275,8 +261,8 @@ const STORE = [
   ],
   correctAnswer: 'The Legion',
   icon: 'https://i.imgur.com/hAklzXJ.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Legion+Female.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Legion+Male.mp3',
   alt: 'The Legion Artwork'
   },
   {
@@ -289,7 +275,7 @@ const STORE = [
   ],
   correctAnswer: '5',
   icon: 'https://i.imgur.com/gOql8Bj.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Pig.mp3',
   audio2: null,
   alt: 'The Pig Artwork'
   },
@@ -303,7 +289,7 @@ const STORE = [
   ],
   correctAnswer: 'The Huntress',
   icon: 'https://i.imgur.com/rCoh1rv.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Huntress.mp3',
   audio2: null,
   alt: 'The Huntress Artwork'
   },
@@ -317,8 +303,8 @@ const STORE = [
   ],
   correctAnswer: '3',
   icon: 'https://i.imgur.com/Sn6JzBk.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Nurse.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Nurse+2.mp3',
   alt: 'The Nurse Artwork'
   },
   {
@@ -331,7 +317,7 @@ const STORE = [
   ],
   correctAnswer: 'Jeffrey "Jeff" Johansen',
   icon: 'https://i.imgur.com/BPq7oCM.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jeff.mp3',
   audio2: null,
   alt: 'Jeff Johansen Artwork'
   },
@@ -345,7 +331,7 @@ const STORE = [
   ],
   correctAnswer: 'Jane Romero',
   icon: 'https://i.imgur.com/mLNuVYR.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jane.mp3',
   audio2: null,
   alt: 'Jane Romero Artwork'
   },
@@ -359,7 +345,7 @@ const STORE = [
   ],
   correctAnswer: 'Meg Thomas',
   icon: 'https://i.imgur.com/QE5hz5x.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Meg.mp3',
   audio2: null,
   alt: 'Meg Thomas Artwork'
   },
@@ -373,7 +359,7 @@ const STORE = [
   ],
   correctAnswer: 'Claudette Morel',
   icon: 'https://i.imgur.com/7l33RRa.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Claudette.mp3',
   audio2: null,
   alt: 'Claudette Morel Artwork'
   },
@@ -387,7 +373,7 @@ const STORE = [
   ],
   correctAnswer: 'Nea Karlsson',
   icon: 'https://i.imgur.com/eHvSLyB.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Nea.mp3',
   audio2: null,
   alt: 'Nea Karlsson Artwork'
   },
@@ -401,7 +387,7 @@ const STORE = [
   ],
   correctAnswer: 'David King',
   icon: 'https://i.imgur.com/gXb7MhO.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/David.mp3',
   audio2: null,
   alt: 'David King Artwork'
   },
@@ -415,7 +401,7 @@ const STORE = [
   ],
   correctAnswer: 'Quentin Smith',
   icon: 'https://i.imgur.com/IocS2jC.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Quentin.mp3',
   audio2: null,
   alt: 'Quentin Smith Artwork'
   },
@@ -429,12 +415,12 @@ const STORE = [
   ],
   correctAnswer: 'Jake Park',
   icon: 'https://i.imgur.com/QBz8Flf.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jake.mp3',
   audio2: null,
   alt: 'Jake Park Artwork'
   },
   {
-    question: 'Which Survivor is known as a "Final Girl"',
+    question: 'Which Survivor is known as a "Final Girl?"',
     answers: [
       'Laurie Strode',
       'Nancy Wheeler',
@@ -443,7 +429,7 @@ const STORE = [
   ],
   correctAnswer: 'Laurie Strode',
   icon: 'https://i.imgur.com/suBaGoI.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Laurie.mp3',
   audio2: null,
   alt: 'Laurie Strode Artwork'
   },
@@ -457,7 +443,7 @@ const STORE = [
   ],
   correctAnswer: 'Ace Visconti',
   icon: 'https://i.imgur.com/ACQ54K8.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Ace.mp3',
   audio2: null,
   alt: 'Ace Visconti Artwork'
   },
@@ -471,12 +457,12 @@ const STORE = [
   ],
   correctAnswer: 'Left Behind',
   icon: 'https://i.imgur.com/YdQXrpL.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Jump+Scare+2.mp3',
   audio2: null,
   alt: 'Left Behind Perk Artwork'
   },
   {
-    question: 'Which character has received a skin originally created by the Dead By Daylight comminuty?',
+    question: 'Which character has received a skin originally created by the Dead By Daylight community?',
     answers: [
       'Feng Min',
       'The Cannibal',
@@ -485,7 +471,7 @@ const STORE = [
   ],
   correctAnswer: 'Feng Min',
   icon: 'https://i.imgur.com/qo58XU9.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Feng.mp3',
   audio2: null,
   alt: 'Feng Min Artwork'
   },
@@ -499,12 +485,12 @@ const STORE = [
   ],
   correctAnswer: 'David Tapp',
   icon: 'https://i.imgur.com/ONaPjKT.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Tapp.mp3',
   audio2: null,
   alt: 'David Tapp Artwork'
   },
   {
-    question: 'Which Survivor is quoted, "Let\'s burn that lab to the ground."',
+    question: 'Which Survivor is quoted, "Let\'s burn that lab to the ground"?',
     answers: [
       'Nancy Wheeler',
       'Steve Harrington',
@@ -513,8 +499,8 @@ const STORE = [
   ],
   correctAnswer: 'Nancy Wheeler',
   icon: 'https://i.imgur.com/a0BAV5B.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Nancy.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Stranger_Things_Theme_Music_.mp3',
   alt: 'Nancy Wheeler Artwork'
   },
   {
@@ -527,8 +513,8 @@ const STORE = [
   ],
   correctAnswer: 'The Demogorgon',
   icon: 'https://i.imgur.com/NpoQzee.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Demo+1.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Demo+2.mp3',
   alt: 'The Demogorgon Artwork'
   },
   {
@@ -541,8 +527,8 @@ const STORE = [
   ],
   correctAnswer: 'The Hillbilly',
   icon: 'https://i.imgur.com/7UJ4ZVL.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hillbilly+1.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Hillbilly+2.mp3',
   alt: 'The Hillbilly Artwork'
   },
   {
@@ -555,8 +541,8 @@ const STORE = [
   ],
   correctAnswer: 'The Doctor',
   icon: 'https://i.imgur.com/L2sMVke.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Doctor+1.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Doctor+2.mp3',
   alt: 'The Doctor Artwork'
   },
   {
@@ -569,8 +555,8 @@ const STORE = [
   ],
   correctAnswer: 'The Wraith',
   icon: 'https://i.imgur.com/HIMjBCu.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Wraith+2.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Wraith+1.mp3',
   alt: 'The Wraith Artwork'
   },
   {
@@ -583,8 +569,8 @@ const STORE = [
   ],
   correctAnswer: '5',
   icon: 'https://i.imgur.com/3zk6WR9.png',
-  audio: '',
-  audio2: null,
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Trapper+2.mp3',
+  audio2: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Trapper+1.mp3',
   alt: 'The Trapper Artwork'
   },
   {
@@ -597,7 +583,7 @@ const STORE = [
   ],
   correctAnswer: 'Kate Denson',
   icon: 'https://i.imgur.com/y7D6t3w.png',
-  audio: '',
+  audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Kate+Scream.mp3',
   audio2: null,
   alt: 'Kate Denson Artwork'
   }
