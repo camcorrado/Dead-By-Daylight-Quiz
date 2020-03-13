@@ -126,7 +126,7 @@ const STORE = [
     alt: 'Hex Totem'
   },
   {
-    question: 'Which Killer’s chapter is the only chapter to not release a Survivor?',
+    question: 'Which Killer was not released alongside a Survivor?',
     answers: [
       'The Ghost Face',
       'The Cannibal',
@@ -168,14 +168,14 @@ const STORE = [
   alt: 'Steve Harrington Artwork'
   },
   {
-    question: 'Which of thes is not a voiceline for Ash Williams?',
+    question: 'Which of these is not a voice line for Ash Williams?',
     answers: [
       'What is this place?',
       'What now?',
-      'Look who\'s shittin\' in the tall grass.',
+      "Look who's shittin' in the tall grass.",
       'Catch ya on the flip-flop.'
   ],
-  correctAnswer: 'Catch ya on the flip-flop',
+  correctAnswer: 'Catch ya on the flip-flop.',
   icon: 'https://i.imgur.com/rTFrhD1.png',
   audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Groovy.mp3',
   audio2: null,
@@ -232,7 +232,7 @@ const STORE = [
       '35'
   ],
   correctAnswer: '20',
-  icon: 'https://i.imgur.com/ER1pFTg.png',
+  icon: 'https://i.imgur.com/Qecxa9V.png',
   audio: 'https://dbd-quiz.s3.us-east-2.amazonaws.com/Exit+Gate.mp3',
   audio2: null,
   alt: 'Escaped Game Artwork'
@@ -266,7 +266,7 @@ const STORE = [
   alt: 'The Legion Artwork'
   },
   {
-    question: 'What is the maximum amount of traps The Pig can have?',
+    question: 'What is the maximum amount of reverse bear traps The Pig can have?',
     answers: [
       '5',
       '4',
@@ -434,7 +434,7 @@ const STORE = [
   alt: 'Laurie Strode Artwork'
   },
   {
-    question: 'Which Survivor is Argentinian',
+    question: 'Which Survivor is Argentinian?',
     answers: [
       'Ace Visconti',
       'Jake Park',
@@ -462,7 +462,7 @@ const STORE = [
   alt: 'Left Behind Perk Artwork'
   },
   {
-    question: 'Which character has received a skin originally created by the Dead By Daylight community?',
+    question: 'Which character has received a skin originally designed by a member of the Dead By Daylight community?',
     answers: [
       'Feng Min',
       'The Cannibal',
@@ -560,7 +560,7 @@ const STORE = [
   alt: 'The Wraith Artwork'
   },
   {
-    question: 'How many bear traps spawn on a map while playing The Trapper?',
+    question: 'How many bear traps spawn by default on a map while playing The Trapper?',
     answers: [
       '5',
       '6',
