@@ -129,7 +129,7 @@ const STORE = [
     question: 'Which Killer was not released alongside a Survivor?',
     answers: [
       'The Ghost Face',
-      'The Cannibal',
+      'The Nurse',
       'The Doctor',
       'The Plague'
   ],
