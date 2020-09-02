@@ -22,19 +22,18 @@ Dead By Daylight's play-style functions largely on variability and randomization
 
 ![quiz question (answered incorrectly)](https://i.imgur.com/Tyn5ELy.png)
 
-![results (win)](https://i.imgur.com/fmwdqQI.png)
+![results (win)](https://i.imgur.com/5MDxnZ4.png)
 
-![results (lose)](https://i.imgur.com/58HMa28.png)
+![results (lose)](https://i.imgur.com/xh9wrXI.png)
 
 ## Built With
 
-* HTML
-* CSS
-* JavaScript
-* jQuery
-* Adobe Photoshop
-* Adobe Audition
-
+- HTML
+- CSS
+- JavaScript
+- jQuery
+- Adobe Photoshop
+- Adobe Audition
 
 ## Live URL
 
