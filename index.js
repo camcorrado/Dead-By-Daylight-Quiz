@@ -336,7 +336,7 @@ function winner() {
   $(".questionAnswerForm").html(`
     <p class='important'>You Survived!</p>
     <p class='basicText'>${finalScore}/10</p>
-    <a href='https://www.deadbydaylight.com/en/age-gate' alt='Dead By Daylight official webpage' target='_blank'>Learn more about Dead By Daylight<a>
+    <a href='https://www.deadbydaylight.com' alt='Dead By Daylight official webpage' target='_blank'>Learn more about Dead By Daylight<a>
     <button type='submit' class='retakeQuiz'>Take The Quiz Again!</button>`);
   $(".questionAnswerForm").fadeIn(1000);
   restartQuiz();
