@@ -206,6 +206,7 @@ function answerIncorrect() {
       $(".answerResponse").fadeIn(1000);
     });
     $(".seeResults").on("click", function () {
+      $(".answerResponse").fadeOut(1000);
       $(".score-tally").fadeOut(1000);
       $(".imagery").fadeOut(1000, function () {
         $(".imagery").html(``);
@@ -242,6 +243,7 @@ function noAnswer() {
       $(".answerResponse").fadeIn(1000);
     });
     $(".seeResults").on("click", function () {
+      $(".answerResponse").fadeOut(1000);
       $(".score-tally").fadeOut(1000);
       $(".imagery").fadeOut(1000, function () {
         $(".imagery").html(``);
