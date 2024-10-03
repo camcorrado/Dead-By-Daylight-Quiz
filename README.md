@@ -28,12 +28,11 @@ Dead By Daylight's play-style functions largely on variability & randomization. 
 
 ## Built With
 
+- jQuery
 - HTML
 - CSS
 - JavaScript
-- jQuery
-- Adobe Photoshop
-- Adobe Audition
+- Adobe Creative Suite
 
 ## Live URL
 
